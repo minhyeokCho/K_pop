@@ -331,13 +331,13 @@ function tournaTable(){ //토너먼트 테이블
 
 
 
-	$(".tournament").on("touchstart", function(event){
+	$(".schedule_box.t_box").on("touchstart", function(event){
 		if(event.originalEvent.touches.length  === 2){
 			scaling  = true;
 		}
 	})
 
-	$(".tournament").on("touchmove", function(event){
+	$(".schedule_box.t_box").on("touchmove", function(event){
 
 		if(scaling){
 			var dist = Math.hypot(
@@ -359,13 +359,13 @@ function tournaTable(){ //토너먼트 테이블
 				setDist = dist;
 			}
 
-			imgWidth = $("#img")[0].clientWidth;
-			imgHeight = $("#img")[0].clientHeight;
+			imgWidth = $(".schedule_box.t_box")[0].clientWidth;
+			imgHeight = $(".schedule_box.t_box")[0].clientHeight;
 
 		}
 	})
 
-	$(".tournament").on("touchend", function(event){
+	$(".schedule_box.t_box").on("touchend", function(event){
 		scaling = false;
 		setDist = 0;
 	})
