@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../../assets/css/style.css">
+	<script type="text/javascript" src="../../assets/js/lib/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/jquery.nice-select.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+	<title>소셜매치 예약내역</title>
+<body>
+<div id="accessibility">
+	<ul>
+		<li><a href="#header" title="주메뉴 바로가기">주메뉴 바로가기</a></li>
+		<li><a href="#contents" title="본문 바로가기">본문 바로가기</a></li>
+		<li><a href="#footer" title="푸터 바로가기">푸터 바로가기</a></li>
+	</ul>
+</div>
+<!-- #WRAP -->
+<div id="wrap">
+	<!-- #header -->
+	<header id="header">
+		<div class="head_wrap">
+			<!-- 메인로고 -->
+			<h1>
+				<a href="../main/main.html" title="pop">
+					<img src="../../assets/images/content/logo.png" alt="pop">
+				</a>
+			</h1>
+			<!--// 메인로고 -->
+
+			<!-- GNB -->
+			<nav>
+				<ul>
+					<li class="dept_01">
+						<a href="../reserv/facility.html" title="예약">예약</a>
+						<ul class="sub_dept">
+							<li><a href="../reserv/facility.html" title="시설">시설</a></li>
+							<li><a href="../reserv/res.html" title="예약">예약</a></li>
+							<li><a href="../reserv/inquiry_02.html" title="예약내역">예약내역</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../compt/league.html" title="대회">대회</a>
+						<ul class="sub_dept">
+							<li><a href="../compt/league.html" title="리그">리그</a></li>
+							<li><a href="../compt/cup.html" title="컵">컵</a></li>
+							<li><a href="../compt/my_compt.html" title="나의 대회">나의 대회</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../player/player.html" title="선수">선수</a>
+					</li>
+					<li class="dept_01">
+						<a href="../team/team.html" title="팀">팀</a>
+						<ul class="sub_dept">
+							<li><a href="../team/team.html" title="팀리스트">팀리스트</a></li>
+							<li><a href="../team/my_team.html" title="나의 팀">나의 팀</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../match/match.html" title="매치용병">매치용병</a>
+						<ul class="sub_dept">
+							<li><a href="../match/match.html" title="매치">매치</a></li>
+							<li><a href="../match/merc.html" title="용병">용병</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../social/match_list.html" title="소셜매치">소셜매치</a>
+						<ul class="sub_dept">
+							<li><a href="../social/match_list.html" title="매치 리스트">매치 리스트</a></li>
+							<li><a href="../social/social_my.html" title="매치 스케줄">매치 스케줄</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!--// GNB -->
+
+			<!-- 유틸메뉴 -->
+			<div class="util_menu">
+				<div class="login_util">
+					<ul>
+						<li><a href="../login/login.html" title="로그인">로그인</a></li>
+						<li><a href="../mypage/info.html" title="MY PAGE">MY PAGE</a></li>
+						<li class="lang"><a href="#" title="KOR">KOR</a></li>
+
+						<!-- <li><a href="#" title="ENG" class="lang">ENG</a></li> -->
+					</ul>
+				</div>
+				<div class="lang_util">
+					<button type="button" class="current">
+						<figure class="img">
+							<img src="../../assets/images/content/flag_kor.svg" alt="KOR">
+						</figure>
+
+						<!-- <figure class="img">
+							<img src="../../assets/images/content/flag_usa.svg" alt="USA">
+						</figure> -->
+					</button>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="../../assets/images/content/flag_kor.svg" alt="KOR">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="../../assets/images/content/flag_usa.svg" alt="USA">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 전체메뉴 버튼 -->
+				<div class="btn_menu">
+					<button type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<ul>
+						<li>
+							<a href="../login/login.html" title="로그인">로그인</a>
+							<a href="../mypage/info.html" title="마이페이지"><img src="../../assets/images/content/ico_my.svg" alt="마이페이지"></a>
+						</li>
+						<li>
+							<a href="../customer/qna.html" title="고객센터">고객센터</a>
+						</li>
+						<li>
+							<a href="../customer/notice.html" title="공지사항">공지사항</a>
+						</li>
+						<li>
+							<a href="../customer/event.html" title="이벤트">이벤트</a>
+						</li>
+					</ul>
+				</div>
+				<!--// 전체메뉴 버튼 -->
+			</div>
+			<!--// 유틸메뉴 -->
+
+		</div>
+		<div class="nav_bg"></div>
+	</header>
+	<!-- // #header -->
+
+	<!-- 전체메뉴 -->
+	<div class="site_menu">
+		<div class="menu_top">
+			<figure class="img">
+				<img src="../../assets/images/content/logo_s.png" alt="pop">
+			</figure>
+			<button class="close_menu"><span class="blind">닫기</span></button>
+		</div>
+		<div class="cs_menu">
+			<ul>
+				<li><a href="../customer/qna.html" title="1:1문의">1:1문의</a></li>
+				<li><a href="../customer/faq.html" title="FAQ">FAQ</a></li>
+				<li><a href="../customer/notice.html" title="공지사항">공지사항</a></li>
+				<li><a href="../customer/event.html" title="이벤트">이벤트</a></li>
+			</ul>
+		</div>
+		<div class="m_menu">
+			<ul>
+				<!-- 로그인전 -->
+				<li class="login_m">
+					<a href="../login/login.html">로그인을 해주세요</a>
+				</li>
+				<!--// 로그인전 -->
+
+				<!-- 로그인 후 -->
+				<li class="my_m">
+					<a href="../mypage/info.html">MY PAGE</a>
+				</li>
+				<!--// 로그인 후 -->
+
+				<li class="lang_m">
+					<p>언어</p>
+					<a href="#">KOR</a>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">예약</a>
+					<ul>
+						<li class="sub_m"><a href="../reserv/facility.html">시설</a></li>
+						<li class="sub_m"><a href="../reserv/res.html">예약</a></li>
+						<li class="sub_m"><a href="../reserv/inquiry_02.html">예약내역</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">대회</a>
+					<ul>
+						<li class="sub_m"><a href="../compt/league.html">리그</a></li>
+						<li class="sub_m"><a href="../compt/cup.html">컵</a></li>
+						<li class="sub_m"><a href="../compt/my_compt.html">나의 대회</a></li>
+					</ul>
+				</li>
+				<li class="acc acc_none">
+					<a href="#" class="acc_ctrl">선수</a>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">팀</a>
+					<ul>
+						<li class="sub_m"><a href="../team/team.html">팀리스트</a></li>
+						<li class="sub_m"><a href="../team/my_team.html">나의 팀</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">매치용병</a>
+					<ul>
+						<li class="sub_m"><a href="../match/match.html">매치</a></li>
+						<li class="sub_m"><a href="../match/merc.html">용병</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">소셜매치</a>
+					<ul>
+						<li class="sub_m"><a href="../social/match_list.html">매치 리스트</a></li>
+						<li class="sub_m"><a href="../social/social_my.html">매치 스케줄</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--// 전체메뉴 -->
+
+	<!-- #CONTENTS -->
+	<div id="contents">
+		<!-- 서브 동영상 -->
+		<div class="sub_video sub_video_02">
+			<video width="100%" height="460" autoplay muted loop>
+				<source src="../../assets/images/video/sub_video_02.mp4">
+			</video>
+		</div>
+		<!--// 서브 동영상 -->
+
+		<!-- 이벤트 슬라이드 -->
+		<div class="evt_slide_wrap">
+			<div class="inner">
+				<div class="evt_slide swiper">
+					<div class="swiper-wrapper">
+						<div class="item swiper-slide">
+							<a href="#" class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</a>
+						</div>
+						<a href="#" class="item swiper-slide">
+							<div class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</div>
+						</a>
+						<div href="#" class="item swiper-slide">
+							<div class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</div>
+						</div>
+					</div>
+					<div class="evt_arr">
+						<button type="button" class="arr evt_prev"><span class="blind">이전</span></button>
+						<button type="button" class="arr evt_next"><span class="blind">다음</span></button>
+					</div>
+					<div class="evt_bullet"></div>
+				</div>
+			</div>
+		</div>
+		<!--// 이벤트 슬라이드 -->
+
+		<!-- location -->
+		<div class="location">
+			<div class="inner">
+				<ul>
+					<li>홈</li>
+					<li>소셜매치</li>
+					<li>매치 리스트</li>
+					<li>예약내역</li>
+				</ul>
+			</div>
+		</div>
+		<!--// location -->
+
+		<div class="sub_content">
+			<!-- 좌측 배너 -->
+			<div class="bnr_wrap bnr_left">
+				<a href="#">
+					<img src="../../assets/images/temp/bnr_01.png">
+				</a>
+			</div>
+			<!--// 좌측 배너 -->
+
+			<!-- 서브컨텐츠 -->
+			<div class="inner">
+				<!-- 컨텐츠 타이틀 -->
+				<div class="content_tit_area tit_line_tab social_ref_tit">
+					<!-- 타이틀 좌측 -->
+					<div class="tit_l">
+						<div class="tab_wrap line_tab js-tab">
+							<ul>
+								<li><a href="#">시설 예약내역</a></li>
+								<li class="on"><a href="#">소셜매치 예약내역</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--// 타이틀 좌측 -->
+
+					<!-- 타이틀 우측 -->
+					<div class="tit_r">
+						<p class="noti_txt gr">최근 3개월 간의 내역을 확인하실 수 있습니다.</p>
+						<select class="sort_select">
+							<option>기간</option>
+							<option>가나다순</option>
+							<option>즐겨찾기순</option>
+						</select>
+					</div>
+					<!--// 타이틀 우측 -->
+				</div>
+				<!--// 컨텐츠 타이틀 -->
+
+				<!-- 예약내역 -->
+				<div class="ref_list">
+					<div class="group">
+						<figure class="img">
+							<img src="../../assets/images/temp/ref_01.png">
+						</figure>
+						<div class="info_wrap">
+							<div class="info_top">
+								<span class="date">2023년 8월 16일 수요일 10:00</span>
+								<p class="name">HM 풋살파크 시흥점</p>
+								<ul>
+									<li>
+										<strong>예약번호</strong>
+										<span>65</span>
+									</li>
+									<li>
+										<strong>구장명</strong>
+										<span>A구장</span>
+									</li>
+								</ul>
+							</div>
+							<div class="info_btm">
+								<div class="cancel_inquiry">
+									<div class="payment_info">
+										<p class="count">신청: <em>1</em>명</p>
+										<p class="charge">결제금액: <em>30,000</em>원</p>
+									</div>
+									<div class="btn_wrap">
+										<a href="social_cancel.html" class="btn line_btn_02"><span>취소요청</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<figure class="img">
+							<img src="../../assets/images/temp/ref_01.png">
+						</figure>
+						<div class="info_wrap">
+							<div class="info_top">
+								<span class="date">2023년 8월 16일 수요일 10:00</span>
+								<p class="name">HM 풋살파크 시흥점</p>
+								<ul>
+									<li>
+										<strong>예약번호</strong>
+										<span>65</span>
+									</li>
+									<li>
+										<strong>구장명</strong>
+										<span>A구장</span>
+									</li>
+								</ul>
+							</div>
+							<div class="info_btm">
+								<div class="cancel_inquiry">
+									<div class="payment_info">
+										<p class="count">신청: <em>1</em>명</p>
+										<p class="charge">결제금액: <em>30,000</em>원</p>
+									</div>
+									<div class="btn_wrap">
+										<a href="social_cancel.html" class="btn line_btn_02"><span>취소요청</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<figure class="img">
+							<img src="../../assets/images/temp/ref_01.png">
+						</figure>
+						<div class="info_wrap">
+							<div class="info_top">
+								<span class="date">2023년 8월 16일 수요일 10:00</span>
+								<p class="name">HM 풋살파크 시흥점</p>
+								<ul>
+									<li>
+										<strong>예약번호</strong>
+										<span>65</span>
+									</li>
+									<li>
+										<strong>구장명</strong>
+										<span>A구장</span>
+									</li>
+								</ul>
+							</div>
+							<div class="info_btm">
+								<div class="cancel_inquiry">
+									<div class="payment_info">
+										<p class="count">신청: <em>1</em>명</p>
+										<p class="charge">결제금액: <em>30,000</em>원</p>
+									</div>
+									<div class="btn_wrap">
+										<a href="social_cancel.html" class="btn line_btn_02"><span>취소요청</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 예약내역 -->
+
+				<div class="paging">
+					<a href="#" class="prev arr"><span class="blind">이전</span></a>
+					<a href="#" class="num">1</a>
+					<a href="#" class="num">2</a>
+					<a href="#" class="num">3</a>
+					<a href="#" class="num">4</a>
+					<a href="#" class="num">5</a>
+					<a href="#" class="next arr"><span class="blind">다음</span></a>
+				</div>
+			</div>
+			<!--// 서브컨텐츠 -->
+
+			<!-- 우측 배너 -->
+			<div class="bnr_wrap bnr_right">
+				<a href="#">
+					<img src="../../assets/images/temp/bnr_02.png">
+				</a>
+			</div>
+			<!--// 우측 배너 -->
+		</div>
+	</div>
+	<!-- // #CONTENTS -->
+
+	<!-- #Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="f_logo">
+				<img src="../../assets/images/content/f_logo.png" alt="pop">
+			</div>
+			<div class="f_info">
+				<p>HNS(본사)</p>
+				<p>e-mail: info@hnscorp.kr</p>
+				<p>TEL: 02-332-7807</p>
+				<p>서울특별시 성동구 왕십리로 58, 서울숲포휴 709호</p>
+			</div>
+			<div class="f_select">
+				<div class="family"><a href="#">Family site</a></div>
+				<ul>
+					<li><a href="#">THE PITCH ONE</a></li>
+					<li><a href="#">에이치엔에스</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!--// #Footer -->
+</div>
+<!-- // WRAP -->
+
+<!-- 환불규정 -->
+<section class="alert_pop refund_pop">
+	<div class="pop_inner">
+		<div class="pop_scroll">
+			<h3 class="pop_tit">환불규정</h3>
+			<div class="refund_policy">
+				<div class="group">
+					<h5 class="po_tit">일반</h5>
+					<ul>
+						<li>매치 이용시간 기준(ex. 20:00)</li>
+						<li>2일 전 취소신청 시 : 100% 환불</li>
+						<li>1일 전 취소신청 시 : 80% 환불</li>
+						<li>당일 2시간 전 취소실청 시 : 20% 환불 (ex. ~18:00)</li>
+						<li>당일 2시간 미만 취소 신청 시 : 0% (ex. 18:00~20:00)</li>
+						<li>참가신청인원 미충족 시, 전액환불</li>
+					</ul>
+				</div>
+				<div class="group">
+					<h5 class="po_tit">특수(우천)</h5>
+					<ul>
+						<li>우천 시에도 경기는 진행되며, 호우주의보, 태풍주의보, 대설주의보 이상 발령 시 경기가 취소 될 수 있습니다. 취소 확정 시 참가비 전액 환불됩니다.</li>
+						<li>취소 안내는 개개인에게 개별로 해당 내용을 전달합니다.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn main_btn closed"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!--// 환불규정 -->
+
+<!-- 결제 취소 확인 -->
+<section class="alert_pop pay_can_pop">
+	<div class="pop_inner">
+		<div class="pop_scroll">
+			<p class="pop_noti">결제 취소 신청을 하시겠습니까?</p>
+
+			<div class="btn_wrap">
+				<a href="#" class="btn line_btn closed"><span>취소</span></a>
+				<a href="#" class="btn main_btn closed"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!--// 	결제 취소 확인 -->
+
+<!-- 환불 금액 확인 동의 -->
+<section class="alert_pop pay_can_pop_02">
+	<div class="pop_inner">
+		<div class="pop_scroll">
+			<p class="pop_noti">환불 금액 확인 동의를 해주세요.</p>
+
+			<div class="btn_wrap">
+				<a href="#" class="btn main_btn closed"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!--// 	환불 금액 확인 동의 -->
+</body>
+</html>

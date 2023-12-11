@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+	<link rel="stylesheet" type="text/css" href="./status.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
+	<title>HTML LIST</title>
+	<style>
+		* {margin:0; padding:0;}
+		body {background-color:#fff; font-family:"Noto Sans KR", san-serif; padding:20px;}
+		caption {display:none; font-size:0; line-height:0; height:0; width:0;}
+		h1 {font-size:24px; margin-bottom:10px;}
+		.note {overflow:hidden; background-color:#eee; border:2px dashed #666; padding:10px;}
+		.note ul {overflow:hidden; padding-left:15px;}
+		.note ul li {list-style:bullet; font-size:12px; line-height:1.5em;}
+		.note ul li em {font-size:14px; font-style:normal; font-weight:bold;}
+		.note ul li .total {color:#666;}
+		.note ul li .end {color:#8059ea;}
+		.note ul li .progress {color:#666;}
+		.note dl {display:flex; overflow:hidden;}
+		.note dl dt {margin-right:4px;}
+		.note dl dt:before {content:"#"; font-weight:bold;}
+		.note dl dt:after {content:" : ";}
+		.note dl dd {margin-right:10px;}
+
+		.status {overflow:hidden; margin-bottom:10px;}
+		.status {overflow:hidden;}
+		.status li {float:left; list-style:none; margin-left:5px;}
+		.status li:first-child {margin-left:0;}
+		.status li a {display:block; font-family:consolas; font-size:11px; text-decoration:none; padding-right:5px; padding-left:5px; height:18px;}
+		.status li a:hover {background-color:#dfb8b6; color:#fff;}
+		section {overflow:hidden;}
+		table {width:100%; border-collapse:collapse; /* table-layout:fixed; */}
+		table ~ table {margin-top:15px;}
+		th, td {word-break:break-all;}
+		tbody .end td {background-color:#ccc;}
+		tbody .modify td {background-color:#e8e9f6;}
+		tbody .ing td {background-color:#ffd200;}
+		thead th {background-color:#eee; color:#333; border:1px solid #666; font-size:13px; padding-top:5px; padding-bottom:5px;}
+		tbody td {border:1px solid #666; font-size:13px; padding:5px;}
+		tbody td.start {color:#ff6028; font-weight:bold;}
+		tbody td.name {color:#555;}
+		tbody td.end {color:#371ad3; font-size:11px; font-weight:bold !important;}
+		tbody td.status {color:#371ad3; font-weight:bold;}
+		tbody .center {text-align:center; padding-right:0; padding-left:0;}
+		tbody .depth01 {font-weight:bold; text-align:center; padding-left:0;}
+		tbody p.link,
+		tbody a {display:inline-block; cursor:pointer; font-family:consolas !important; font-size:12px; text-decoration:none; color:#111;}
+		tbody p.link:hover, tbody a:hover {text-decoration:underline;}
+		tbody .comment p {position:relative; font-size:12px; padding-left:12px;}
+		tbody .comment p:before {content:'*'; font-size:16px; font-weight:bold; line-height:24px; position:absolute; left:0; top:0;}
+		tbody .comment a {color:#a70404; font-weight:bold;}
+
+
+		.site_nav {background-color:#fff;  position:sticky; left:0; top:0; padding:10px 0; z-index:999;}
+		.site_nav ul {display:flex; overflow-x:auto;}
+		.site_nav ul li {flex:none; list-style:none;}
+		.site_nav ul li ~ li {margin-left:5px;}
+		.site_nav a {background-color:#ddd; display:block; color:#666; font-size:14px; text-align:center; text-decoration:none; padding:5px;}
+		.site_nav ul li.on a {background-color:#ffb800; color:#222; font-weight:bold;}
+
+		thead .menu_section th {background:linear-gradient(106.79deg, #2141A0 0%, #1A3279 100%); box-sizing:border-box; padding:4px;}
+		thead .menu_section th h1 {color:#fff; font-size:18px; text-align:center; margin:0;}
+		.menu_section_02 td {background-color:#e0e0e0; font-weight:bold; text-align:center;}
+
+		.menu_wrap.all .menu_list {display:block;}
+		.menu_list {display:none; margin-top:30px;}
+		.menu_list.on {display:block;}
+
+		th:nth-child(1), td:nth-child(1) {width:11%;}
+		th:nth-child(2), td:nth-child(2) {width:12%;}
+		th:nth-child(3), td:nth-child(3) {width:11%;}
+		th:nth-child(4), td:nth-child(4) {width:10%;}
+		th:nth-child(5), td:nth-child(5) {width:4%;}
+		th:nth-child(6), td:nth-child(6) {width:16%;}
+		th:nth-child(7), td:nth-child(7) {width:4%;}
+		th:nth-child(8), td:nth-child(8) {width:5%;}
+		th:nth-child(9), td:nth-child(9) {width:27%;}
+
+		/* MOBILE */
+		@media screen and (max-width:768px){
+			body {padding:10px;}
+			h1 {font-size:16px;}
+			.note {display:none; overflow:hidden; line-height:0; height:0; width:0;}
+			table tbody tr td {font-size:13px;}
+			th:nth-child(5),
+			td:nth-child(5),
+			th:nth-child(7),
+			th:nth-child(8),
+			th:nth-child(9),
+			td:nth-child(9),
+			th:nth-child(10),
+			td.center {display:none; overflow:hidden; line-height:0; height:0; width:0;}
+
+			th:nth-child(1), td:nth-child(1) {width:16%;}
+			th:nth-child(2), td:nth-child(2) {width:16%;}
+			th:nth-child(3), td:nth-child(3) {width:16%;}
+			th:nth-child(4), td:nth-child(4) {width:16%;}
+			th:nth-child(6), td:nth-child(6) {width:36%;}
+		}
+
+		/* MENU:HOVER_COLOR */
+		table tbody tr:hover td {transition:all 0.3s;}
+		table tbody tr.menu01:hover td {background-color:#cec1d6;}
+		table tbody tr.menu02:hover td {background-color:#efffd9;}
+		table tbody tr.menu03:hover td {background-color:#c8dfe8;}
+		table tbody tr.menu04:hover td {background-color:#99f2e2;}
+		table tbody tr.menu05:hover td {background-color:#dfb8b6;}
+		table tbody tr.menu06:hover td {background-color:#aaddf2;}
+		table tbody tr.menu07:hover td {background-color:#ffd665;}
+		table tbody tr.menu08:hover td {background-color:#76d7ff;}
+		table tbody tr.menu09:hover td {background-color:#edcaff;}
+		table tbody tr.menu10:hover td {background-color:#d4e4f5;}
+		table tbody tr.menu11:hover td {background-color:#41ffb7;}
+		table tbody tr.menu12:hover td {background-color:#f288af;}
+		table tbody tr.menu13:hover td {background-color:#7fb2f0;}
+		table tbody tr.menu14:hover td {background-color:#eddfaf;}
+
+		#layout {margin-bottom:20px;}
+		.g_wrap > p {font-size:13px; line-height:20px;}
+	</style>
+</head>
+
+<body>
+<h1>HTML LIST</h1>
+
+<div class="menu_wrap all">
+	<!-- list 템플릿 -->
+	<section class="menu_list">
+		<table>
+			<colgroup>
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1DEPTH</th>
+					<th scope="col">2DEPTH</th>
+					<th scope="col">3DEPTH</th>
+					<th scope="col">LINK</th>
+					<th scope="col">COMMENT</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 메인 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">메인</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">메인</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/main/main.html" target="_blank">main</a></td>
+					<td class="comment"></td>
+				</tr>
+				<!--// 메인 -->
+
+				<!-- 로그인 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">로그인</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">로그인</td>
+					<td>회원</td>
+					<td></td>
+					<td><a href="web/html/login/login.html" target="_blank">login</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>비회원</td>
+					<td></td>
+					<td><a href="web/html/login/login_02.html" target="_blank">login_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">아이디 찾기</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/login/find_id.html" target="_blank">find_id</a></td>
+					<td class="comment">
+						<p>아이디 찾기 완료 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">비밀번호 찾기</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/login/find_pw.html" target="_blank">find_pw</a></td>
+					<td class="comment">
+						<p>새 비밀번호 설정 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">회원가입</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/login/join.html" target="_blank">join</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>약관동의</td>
+					<td></td>
+					<td><a href="web/html/login/policy.html" target="_blank">policy</a></td>
+					<td class="comment">
+						<p>14세 미만 가입 동의 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>정보입력</td>
+					<td></td>
+					<td><a href="web/html/login/join_input.html" target="_blank">join_input</a></td>
+					<td class="comment"></td>
+				</tr>
+				<!--// 로그인 -->
+
+				<!-- MY PAGE -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">MY PAGE</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">회원정보</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/mypage/info.html" target="_blank">info</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">소셜매치</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/mypage/social.html" target="_blank">social</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">충전금</td>
+					<td>충전내역</td>
+					<td></td>
+					<td><a href="web/html/mypage/recharge_01.html" target="_blank">recharge_01</a></td>
+					<td class="comment">
+						<p>충전금 정책 및 유의사항 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>충전하기</td>
+					<td></td>
+					<td><a href="web/html/mypage/recharge_02.html" target="_blank">recharge_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">메시지함</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/mypage/msg.html" target="_blank">msg</a></td>
+					<td class="comment"></td>
+				</tr>
+				<!--// MY PAGE -->
+
+				<!-- 고객센터 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">고객센터</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">고객센터</td>
+					<td>1:1문의</td>
+					<td></td>
+					<td><a href="web/html/customer/qna.html" target="_blank">qna</a></td>
+					<td class="comment">
+						<p>문의하기 작성 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>FAQ</td>
+					<td></td>
+					<td><a href="web/html/customer/faq.html" target="_blank">faq</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">공지사항</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/customer/notice.html" target="_blank">notice</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>공지사항 작성</td>
+					<td></td>
+					<td><a href="web/html/customer/notice_w.html" target="_blank">notice_w</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">이벤트</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/customer/event.html" target="_blank">event</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>상세</td>
+					<td></td>
+					<td><a href="web/html/customer/event_d.html" target="_blank">event_d</a></td>
+					<td class="comment"></td>
+				</tr>
+				<!--// 고객센터 -->
+
+				<!-- 예약 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">예약</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">시설</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/reserv/facility.html" target="_blank">facility</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>상세</td>
+					<td>구장안내</td>
+					<td><a href="web/html/reserv/facility_01.html" target="_blank">facility_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>대관요금</td>
+					<td><a href="web/html/reserv/facility_02.html" target="_blank">facility_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>유의사항</td>
+					<td><a href="web/html/reserv/facility_03.html" target="_blank">facility_03</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>환불규정</td>
+					<td><a href="web/html/reserv/facility_04.html" target="_blank">facility_04</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>위치안내</td>
+					<td><a href="web/html/reserv/facility_05.html" target="_blank">facility_05</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">예약하기</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/reserv/res.html" target="_blank">res</a></td>
+					<td class="comment">
+						<p>매치등록 / 용병모집등록 탭</p>
+						<p>예약완료 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>비회원</td>
+					<td></td>
+					<td><a href="web/html/reserv/res_02.html" target="_blank">res_02</a></td>
+					<td class="comment">
+						<p>예약완료 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">예약내역</td>
+					<td>비회원 예약 조회</td>
+					<td></td>
+					<td><a href="web/html/reserv/inquiry_01.html" target="_blank">inquiry_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>시설 예약내역</td>
+					<td></td>
+					<td><a href="web/html/reserv/inquiry_02.html" target="_blank">inquiry_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>예약 상세내역</td>
+					<td><a href="web/html/reserv/inquiry_03.html" target="_blank">inquiry_04</a></td>
+					<td class="comment">
+						<p>예약변경 팝업 有</p>
+						<p>예약취소 팝업 有</p>
+					</td>
+				</tr>
+				<!--// 예약 -->
+
+				<!-- 대회 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">대회</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">리그</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="web/html/compt/league.html" target="_blank">league</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">리그 상세내역</td>
+					<td>리그 소개</td>
+					<td></td>
+					<td><a href="web/html/compt/lg_d.html" target="_blank">lg_d</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>신청하기</td>
+					<td></td>
+					<td><a href="web/html/compt/lg_app_01.html" target="_blank">lg_app_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>정보입력</td>
+					<td><a href="web/html/compt/lg_app_02.html" target="_blank">lg_app_02</a></td>
+					<td class="comment">
+						<p>선수명단 선택 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀리스트</td>
+					<td></td>
+					<td><a href="web/html/compt/lg_team.html" target="_blank">lg_team</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>경기일정</td>
+					<td></td>
+					<td><a href="web/html/compt/lg_sche.html" target="_blank">lg_sche</a></td>
+					<td class="comment">
+						<p>상세내용 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>순위</td>
+					<td>팀순위</td>
+					<td><a href="web/html/compt/lg_rank_01.html" target="_blank">lg_rank_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>개인순위</td>
+					<td><a href="web/html/compt/lg_rank_02.html" target="_blank">lg_rank_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>공지사항</td>
+					<td><a href="web/html/compt/lg_noti.html" target="_blank">lg_noti</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">컵</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="web/html/compt/cup.html" target="_blank">cup</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">컵 상세내역</td>
+					<td>컵 소개</td>
+					<td></td>
+					<td><a href="web/html/compt/cup_d.html" target="_blank">cup_d</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>신청하기</td>
+					<td></td>
+					<td><a href="web/html/compt/cup_app_01.html" target="_blank">cup_app_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>정보입력</td>
+					<td><a href="web/html/compt/cup_app_02.html" target="_blank">cup_app_02</a></td>
+					<td class="comment">
+						<p>선수명단 선택 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀리스트</td>
+					<td></td>
+					<td><a href="web/html/compt/cup_team.html" target="_blank">cup_team</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>경기일정</td>
+					<td></td>
+					<td><a href="web/html/compt/cup_sche.html" target="_blank">cup_sche</a></td>
+					<td class="comment">
+						<p>상세내용 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>순위</td>
+					<td>팀순위</td>
+					<td><a href="web/html/compt/cup_rank_01.html" target="_blank">cup_rank_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>개인순위</td>
+					<td><a href="web/html/compt/cup_rank_02.html" target="_blank">cup_rank_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>공지사항</td>
+					<td><a href="web/html/compt/cup_noti.html" target="_blank">cup_noti</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">나의 대회</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/compt/my_compt.html" target="_blank">my_compt</a></td>
+					<td class="comment"></td>
+				</tr>
+
+				<!-- 선수 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">선수</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">선수</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="web/html/player/player.html" target="_blank">player</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>선수정보</td>
+					<td></td>
+					<td><a href="web/html/player/player_info.html" target="_blank">player_info</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>선수순위</td>
+					<td></td>
+					<td><a href="web/html/player/player_rank.html" target="_blank">player_rank</a></td>
+					<td class="comment"></td>
+				</tr>
+				<!--// 선수 -->
+
+				<!-- 팀 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">팀</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">팀 리스트</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="web/html/team/team.html" target="_blank">team</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀정보</td>
+					<td>비공개</td>
+					<td><a href="web/html/team/team_info.html" target="_blank">team_info</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>공개</td>
+					<td><a href="web/html/team/team_info_02.html" target="_blank">team_info_02</a></td>
+					<td class="comment">
+						<p>공유하기 팝업 有</p>
+						<p>팀원신청 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀원목록</td>
+					<td></td>
+					<td><a href="web/html/team/team_list.html" target="_blank">team_list</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>선수정보</td>
+					<td><a href="web/html/team/player_info.html" target="_blank">player_info</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀일정</td>
+					<td></td>
+					<td><a href="web/html/team/team_sche.html" target="_blank">team_sche</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀순위</td>
+					<td></td>
+					<td><a href="web/html/team/team_rank.html" target="_blank">team_rank</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">나의 팀</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/team/my_team.html" target="_blank">my_team</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀 정보</td>
+					<td></td>
+					<td><a href="web/html/team/my_team_info.html" target="_blank">my_team_info</a></td>
+					<td class="comment">
+						<p>팀 설정 팝업 有</p>
+						<p>공유하기 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀원목록</td>
+					<td></td>
+					<td><a href="web/html/team/my_player_list.html" target="_blank">my_player_list</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀일정</td>
+					<td></td>
+					<td><a href="web/html/team/my_sche.html" target="_blank">my_sche</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>팀순위</td>
+					<td></td>
+					<td><a href="web/html/team/my_rank.html" target="_blank">my_rank</a></td>
+					<td class="comment"></td>
+				</tr>
+				<!--// 팀 -->
+
+				<!-- 매치용병 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">매치용병</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">매치</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/match/match.html" target="_blank">match</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>등록하기</td>
+					<td></td>
+					<td><a href="web/html/match/match_app.html" target="_blank">match_app</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>상세정보</td>
+					<td></td>
+					<td><a href="web/html/match/match_d.html" target="_blank">match_d</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>신청 대기자</td>
+					<td>등록자</td>
+					<td><a href="web/html/match/match_wait_01.html" target="_blank">match_wait_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>신청자</td>
+					<td><a href="web/html/match/match_wait_02.html" target="_blank">match_wait_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>신청완료</td>
+					<td><a href="web/html/match/match_wait_03.html" target="_blank">match_wait_03</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">용병</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/match/merc.html" target="_blank">merc</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>등록하기</td>
+					<td></td>
+					<td><a href="web/html/match/merc_app.html" target="_blank">merc_app</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>상세정보</td>
+					<td>모집</td>
+					<td><a href="web/html/match/merc_d_01.html" target="_blank">merc_d_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>신청</td>
+					<td><a href="web/html/match/merc_d_02.html" target="_blank">merc_d_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>신청 대기자</td>
+					<td>등록자</td>
+					<td><a href="web/html/match/merc_wait_01.html" target="_blank">merc_wait_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>신청전</td>
+					<td><a href="web/html/match/merc_wait_02.html" target="_blank">merc_wait_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>신청완료</td>
+					<td><a href="web/html/match/merc_wait_03.html" target="_blank">merc_wait_03</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>수락</td>
+					<td><a href="web/html/match/merc_wait_04.html" target="_blank">merc_wait_04</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>거절</td>
+					<td><a href="web/html/match/merc_wait_05.html" target="_blank">merc_wait_05</a></td>
+					<td class="comment"></td>
+				</tr>
+				<!--// 매치용병 -->
+
+				<!-- 소셜매치 -->
+				<tr class="menu_section_02 ignore">
+					<td colspan="5">소셜매치</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">매치 리스트</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/social/match_list.html" target="_blank">match_list</a></td>
+					<td class="comment">
+						<p>신청완료 팝업 有</p>
+					</td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">구장 정보</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/social/stadium.html" target="_blank">stadium</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>신청하기</td>
+					<td></td>
+					<td><a href="web/html/social/stadium_app.html" target="_blank">stadium_app</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>동시간 불가 팝업</td>
+					<td><a href="web/html/social/stadium_pop_01.html" target="_blank">stadium_pop_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>약관 동의 팝업</td>
+					<td><a href="web/html/social/stadium_pop_02.html" target="_blank">stadium_pop_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>결제 금액 부족 팝업</td>
+					<td><a href="web/html/social/stadium_pop_03.html" target="_blank">stadium_pop_03</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>신청완료</td>
+					<td></td>
+					<td><a href="web/html/social/stadium_complt.html" target="_blank">stadium_complt</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">소셜매치 예약내역</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/social/social_inquiry.html" target="_blank">social_inquiry</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>취소요청</td>
+					<td></td>
+					<td><a href="web/html/social/social_cancel.html" target="_blank">social_cancel</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>환불규정 팝업</td>
+					<td><a href="web/html/social/cancel_pop_01.html" target="_blank">cancel_pop_01</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>결제 취소 확인 팝업</td>
+					<td><a href="web/html/social/cancel_pop_02.html" target="_blank">cancel_pop_02</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td></td>
+					<td>환불동의 팝업</td>
+					<td><a href="web/html/social/cancel_pop_03.html" target="_blank">cancel_pop_03</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>취소완료</td>
+					<td></td>
+					<td><a href="web/html/social/social_cancel_complt.html" target="_blank">social_cancel_complt</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01">매치 스케줄</td>
+					<td></td>
+					<td></td>
+					<td><a href="web/html/social/social_my.html" target="_blank">social_my</a></td>
+					<td class="comment"></td>
+				</tr>
+				<tr class="menu02">
+					<td class="depth01"></td>
+					<td>스케줄 없음</td>
+					<td></td>
+					<td><a href="web/html/social/social_none.html" target="_blank">social_none</a></td>
+					<td class="comment"></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<!--// list 템플릿 -->
+</div>
+
+<!-- list 템플릿 -->
+<section class="menu_list" style="display:none;">
+	<table>
+		<thead>
+			<tr class="menu_section">
+				<th colspan="9">
+					<h1>list 템플릿</h1>
+				</th>
+			</tr>
+			<tr>
+				<th scope="col">1DEPTH</th>
+				<th scope="col">2DEPTH</th>
+				<th scope="col">3DEPTH</th>
+				<th scope="col">4DEPTH or TAB</th>
+				<th scope="col">TYPE</th>
+				<th scope="col">LINK</th>
+				<th scope="col">NAME</th>
+				<th scope="col">COMPLETE</th>
+				<th scope="col">COMMENT</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="menu01 ignore">
+				<td class="depth01">메인</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="center"></td>
+				<td><p class="link">/customer/main</p></td>
+				<td class="center name"></td>
+				<td class="center end"></td>
+				<td class="comment"></td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+<!--// list 템플릿 -->
+</body>
+</html>

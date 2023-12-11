@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="../../assets/css/style.css">
+	<script type="text/javascript" src="../../assets/js/lib/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/jquery.nice-select.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+	<title>예약하기</title>
+</head>
+<body>
+<div id="accessibility">
+	<ul>
+		<li><a href="#header" title="주메뉴 바로가기">주메뉴 바로가기</a></li>
+		<li><a href="#contents" title="본문 바로가기">본문 바로가기</a></li>
+		<li><a href="#footer" title="푸터 바로가기">푸터 바로가기</a></li>
+	</ul>
+</div>
+<!-- #WRAP -->
+<div id="wrap">
+	<!-- #header -->
+	<header id="header">
+		<div class="head_wrap">
+			<!-- 메인로고 -->
+			<h1>
+				<a href="../main/main.html" title="pop">
+					<img src="../../assets/images/content/logo.png" alt="pop">
+				</a>
+			</h1>
+			<!--// 메인로고 -->
+
+			<!-- GNB -->
+			<nav>
+				<ul>
+					<li class="dept_01">
+						<a href="../reserv/facility.html" title="예약">예약</a>
+						<ul class="sub_dept">
+							<li><a href="../reserv/facility.html" title="시설">시설</a></li>
+							<li><a href="../reserv/res.html" title="예약">예약</a></li>
+							<li><a href="../reserv/inquiry_02.html" title="예약내역">예약내역</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../compt/league.html" title="대회">대회</a>
+						<ul class="sub_dept">
+							<li><a href="../compt/league.html" title="리그">리그</a></li>
+							<li><a href="../compt/cup.html" title="컵">컵</a></li>
+							<li><a href="../compt/my_compt.html" title="나의 대회">나의 대회</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../player/player.html" title="선수">선수</a>
+					</li>
+					<li class="dept_01">
+						<a href="../team/team.html" title="팀">팀</a>
+						<ul class="sub_dept">
+							<li><a href="../team/team.html" title="팀리스트">팀리스트</a></li>
+							<li><a href="../team/my_team.html" title="나의 팀">나의 팀</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../match/match.html" title="매치용병">매치용병</a>
+						<ul class="sub_dept">
+							<li><a href="../match/match.html" title="매치">매치</a></li>
+							<li><a href="../match/merc.html" title="용병">용병</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../social/match_list.html" title="소셜매치">소셜매치</a>
+						<ul class="sub_dept">
+							<li><a href="../social/match_list.html" title="매치 리스트">매치 리스트</a></li>
+							<li><a href="../social/social_my.html" title="매치 스케줄">매치 스케줄</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!--// GNB -->
+
+			<!-- 유틸메뉴 -->
+			<div class="util_menu">
+				<div class="login_util">
+					<ul>
+						<li><a href="../login/login.html" title="로그인">로그인</a></li>
+						<li><a href="../mypage/info.html" title="MY PAGE">MY PAGE</a></li>
+						<li class="lang"><a href="#" title="KOR">KOR</a></li>
+
+						<!-- <li><a href="#" title="ENG" class="lang">ENG</a></li> -->
+					</ul>
+				</div>
+				<div class="lang_util">
+					<button type="button" class="current">
+						<figure class="img">
+							<img src="../../assets/images/content/flag_kor.svg" alt="KOR">
+						</figure>
+
+						<!-- <figure class="img">
+							<img src="../../assets/images/content/flag_usa.svg" alt="USA">
+						</figure> -->
+					</button>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="../../assets/images/content/flag_kor.svg" alt="KOR">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="../../assets/images/content/flag_usa.svg" alt="USA">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 전체메뉴 버튼 -->
+				<div class="btn_menu">
+					<button type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<ul>
+						<li>
+							<a href="../login/login.html" title="로그인">로그인</a>
+							<a href="../mypage/info.html" title="마이페이지"><img src="../../assets/images/content/ico_my.svg" alt="마이페이지"></a>
+						</li>
+						<li>
+							<a href="../customer/qna.html" title="고객센터">고객센터</a>
+						</li>
+						<li>
+							<a href="../customer/notice.html" title="공지사항">공지사항</a>
+						</li>
+						<li>
+							<a href="../customer/event.html" title="이벤트">이벤트</a>
+						</li>
+					</ul>
+				</div>
+				<!--// 전체메뉴 버튼 -->
+			</div>
+			<!--// 유틸메뉴 -->
+
+		</div>
+		<div class="nav_bg"></div>
+	</header>
+	<!-- // #header -->
+
+	<!-- 전체메뉴 -->
+	<div class="site_menu">
+		<div class="menu_top">
+			<figure class="img">
+				<img src="../../assets/images/content/logo_s.png" alt="pop">
+			</figure>
+			<button class="close_menu"><span class="blind">닫기</span></button>
+		</div>
+		<div class="cs_menu">
+			<ul>
+				<li><a href="../customer/qna.html" title="1:1문의">1:1문의</a></li>
+				<li><a href="../customer/faq.html" title="FAQ">FAQ</a></li>
+				<li><a href="../customer/notice.html" title="공지사항">공지사항</a></li>
+				<li><a href="../customer/event.html" title="이벤트">이벤트</a></li>
+			</ul>
+		</div>
+		<div class="m_menu">
+			<ul>
+				<!-- 로그인전 -->
+				<li class="login_m">
+					<a href="../login/login.html">로그인을 해주세요</a>
+				</li>
+				<!--// 로그인전 -->
+
+				<!-- 로그인 후 -->
+				<li class="my_m">
+					<a href="../mypage/info.html">MY PAGE</a>
+				</li>
+				<!--// 로그인 후 -->
+
+				<li class="lang_m">
+					<p>언어</p>
+					<a href="#">KOR</a>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">예약</a>
+					<ul>
+						<li class="sub_m"><a href="../reserv/facility.html">시설</a></li>
+						<li class="sub_m"><a href="../reserv/res.html">예약</a></li>
+						<li class="sub_m"><a href="../reserv/inquiry_02.html">예약내역</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">대회</a>
+					<ul>
+						<li class="sub_m"><a href="../compt/league.html">리그</a></li>
+						<li class="sub_m"><a href="../compt/cup.html">컵</a></li>
+						<li class="sub_m"><a href="../compt/my_compt.html">나의 대회</a></li>
+					</ul>
+				</li>
+				<li class="acc acc_none">
+					<a href="#" class="acc_ctrl">선수</a>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">팀</a>
+					<ul>
+						<li class="sub_m"><a href="../team/team.html">팀리스트</a></li>
+						<li class="sub_m"><a href="../team/my_team.html">나의 팀</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">매치용병</a>
+					<ul>
+						<li class="sub_m"><a href="../match/match.html">매치</a></li>
+						<li class="sub_m"><a href="../match/merc.html">용병</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">소셜매치</a>
+					<ul>
+						<li class="sub_m"><a href="../social/match_list.html">매치 리스트</a></li>
+						<li class="sub_m"><a href="../social/social_my.html">매치 스케줄</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--// 전체메뉴 -->
+
+	<!-- #CONTENTS -->
+	<div id="contents">
+		<!-- 서브 동영상 -->
+		<div class="sub_video">
+			<video width="100%" height="460" autoplay muted loop>
+				<source src="../../assets/images/video/sub_video_01.mp4">
+			</video>
+		</div>
+		<!--// 서브 동영상 -->
+
+		<!-- 이벤트 슬라이드 -->
+		<div class="evt_slide_wrap">
+			<div class="inner">
+				<div class="evt_slide swiper">
+					<div class="swiper-wrapper">
+						<div class="item swiper-slide">
+							<a href="#" class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</a>
+						</div>
+						<a href="#" class="item swiper-slide">
+							<div class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</div>
+						</a>
+						<div href="#" class="item swiper-slide">
+							<div class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</div>
+						</div>
+					</div>
+					<div class="evt_arr">
+						<button type="button" class="arr evt_prev"><span class="blind">이전</span></button>
+						<button type="button" class="arr evt_next"><span class="blind">다음</span></button>
+					</div>
+					<div class="evt_bullet"></div>
+				</div>
+			</div>
+		</div>
+		<!--// 이벤트 슬라이드 -->
+
+		<!-- location -->
+		<div class="location">
+			<div class="inner">
+				<ul>
+					<li>홈</li>
+					<li>예약</li>
+					<li>예약하기</li>
+				</ul>
+			</div>
+		</div>
+		<!--// location -->
+
+		<div class="sub_content">
+			<!-- 좌측 배너 -->
+			<div class="bnr_wrap bnr_left">
+				<a href="#">
+					<img src="../../assets/images/temp/bnr_01.png">
+				</a>
+			</div>
+			<!--// 좌측 배너 -->
+
+			<!-- 서브컨텐츠 -->
+			<div class="inner res_inner">
+				<!-- 컨텐츠 타이틀 -->
+				<div class="content_tit_area">
+					<!-- 타이틀 좌측 -->
+					<div class="tit_l">
+						<p class="amount">
+							총 결제금액 <em>1,000,000 원</em>
+						</p>
+					</div>
+					<!--// 타이틀 좌측 -->
+
+					<!-- 타이틀 우측 -->
+					<div class="tit_r">
+						<div class="btn_wrap">
+							<a href="#" class="btn main_btn btn_alert" open-alert="res_complete"><span>예약완료하기</span></a>
+						</div>
+					</div>
+					<!--// 타이틀 우측 -->
+				</div>
+				<!--// 컨텐츠 타이틀 -->
+
+				<!-- 예약폼 -->
+				<div class="res_form">
+					<div class="group date_wrap">
+						<div class="item">
+							<p class="form_tit t_date">날짜선택 <span>(필수)</span></p>
+							<div id="datepicker" class="datepiacker"></div>
+							<div class="opt">
+								<span class="able">선택</span>
+								<span class="disable">불가</span>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<div class="item">
+							<p class="form_tit t_fac">시설선택 <span>(필수)</span></p>
+							<select class="select_box">
+								<option>시설(지점)을 선택하세요</option>
+								<option>더피치 인하점</option>
+								<option>아산인주풋살장</option>
+							</select>
+						</div>
+						<div class="item">
+							<p class="form_tit t_std">구장선택 <span>(필수)</span></p>
+							<select class="select_box">
+								<option>구장을 선택하세요</option>
+								<option>더피치 인하점</option>
+								<option>아산인주풋살장</option>
+							</select>
+						</div>
+						<div class="item">
+							<p class="form_tit t_team">팀선택 <span>(필수)</span></p>
+							<select class="select_box">
+								<option>팀을 선택하세요</option>
+								<option>더피치 인하점</option>
+								<option>아산인주풋살장</option>
+							</select>
+						</div>
+						<div class="item">
+							<p class="form_tit t_time">시간선택 <span>(필수)</span></p>
+							<div class="time_li">
+								<label for="rdo_time_01">
+									<input type="radio" name="rdo_time" id="rdo_time_01">
+									<span>06:00~08:00</span>
+								</label>
+								<label for="rdo_time_02">
+									<input type="radio" name="rdo_time" id="rdo_time_02">
+									<span>09:00~11:00</span>
+								</label>
+								<label for="rdo_time_03">
+									<input type="radio" name="rdo_time" id="rdo_time_03">
+									<span>12:00~14:00</span>
+								</label>
+								<label for="rdo_time_04">
+									<input type="radio" name="rdo_time" id="rdo_time_04">
+									<span>15:00~17:00</span>
+								</label>
+								<label for="rdo_time_05">
+									<input type="radio" name="rdo_time" id="rdo_time_05" checked>
+									<span>18:00~20:00</span>
+								</label>
+								<label for="rdo_time_06">
+									<input type="radio" name="rdo_time" id="rdo_time_06">
+									<span>21:00~23:00</span>
+								</label>
+								<label for="rdo_time_07">
+									<input type="radio" name="rdo_time" id="rdo_time_07">
+									<span>24:00~02:00</span>
+								</label>
+								<label for="rdo_time_08">
+									<input type="radio" name="rdo_time" id="rdo_time_08">
+									<span>03:00~05:00</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<div class="tab_group">
+							<div class="chk_wrap">
+								<label class="form_chk" for="tab_01">
+									<input type="radio" id="tab_01" name="tab">
+									<i></i>
+									<p>매치등록</p>
+								</label>
+							</div>
+							<div class="tab_cotn">
+								<p class="caution">매치를 등록하면 경기를 의망하는 팀의 연락이 메시지함으로 발송됩니다.</p>
+								<div class="item">
+									<p class="form_tit t_vs">매치형태</p>
+									<select class="select_box">
+										<option>매치형태를 선택하세요</option>
+										<option>더피치 인하점</option>
+										<option>아산인주풋살장</option>
+									</select>
+								</div>
+								<div class="item">
+									<p class="form_tit t_team">신청가능 팀 수</p>
+									<select class="select_box">
+										<option>신청 팀 수를 선택하세요</option>
+										<option>더피치 인하점</option>
+										<option>아산인주풋살장</option>
+									</select>
+								</div>
+								<div class="item">
+									<p class="form_tit t_rank">팀 수준</p>
+									<select class="select_box">
+										<option>수준을 선택하세요</option>
+										<option>더피치 인하점</option>
+										<option>아산인주풋살장</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="tab_group">
+							<div class="chk_wrap">
+								<label class="form_chk" for="tab_02">
+									<input type="radio" id="tab_02" name="tab">
+									<i></i>
+									<p>용병모집등록</p>
+								</label>
+							</div>
+							<div class="tab_cotn">
+								<p class="caution">용병모집을 등록하면 용병 신청을 원하는 선수들의 연락이 메시지함으로 발송됩니다.</p>
+								<div class="item">
+									<p class="form_tit t_plus">용병모집인원</p>
+									<select class="select_box">
+										<option>용병 모집 인원을 선택하세요</option>
+										<option>더피치 인하점</option>
+										<option>아산인주풋살장</option>
+									</select>
+								</div>
+								<div class="item">
+									<p class="form_tit t_rank">용병수준</p>
+									<select class="select_box">
+										<option>용병수준을 선택하세요</option>
+										<option>더피치 인하점</option>
+										<option>아산인주풋살장</option>
+									</select>
+									<textarea rows="" cols="" placeholder="매칭 시간, 연락처, 팀 소개 메모 등"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="non_mem_wrap">
+							<div class="non_form">
+								<div class="inpt_wrap">
+									<p class="tit">신청자</p>
+									<input type="text" class="inpt">
+								</div>
+								<div class="inpt_wrap">
+									<p class="tit">연락처</p>
+									<input type="text" class="inpt">
+								</div>
+								<div class="inpt_wrap">
+									<p class="tit">비밀번호</p>
+									<input type="password" class="inpt">
+								</div>
+								<div class="inpt_wrap">
+									<p class="tit">메모</p>
+									<textarea class="inpt"></textarea>
+								</div>
+								<div class="chk_wrap">
+									<label class="form_chk" for="tab_03">
+										<input type="checkbox" id="tab_03" name="non_mem">
+										<i></i>
+										<p>예약자 정보 및 환불규정/주의사항을 모두 확인 했습니다.</p>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 예약폼 -->
+
+				<!--// 시설 리스트 -->
+			</div>
+			<!--// 서브컨텐츠 -->
+
+			<!-- 우측 배너 -->
+			<div class="bnr_wrap bnr_right">
+				<a href="#">
+					<img src="../../assets/images/temp/bnr_02.png">
+				</a>
+			</div>
+			<!--// 우측 배너 -->
+		</div>
+	</div>
+	<!-- // #CONTENTS -->
+
+	<!-- #Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="f_logo">
+				<img src="../../assets/images/content/f_logo.png" alt="pop">
+			</div>
+			<div class="f_info">
+				<p>HNS(본사)</p>
+				<p>e-mail: info@hnscorp.kr</p>
+				<p>TEL: 02-332-7807</p>
+				<p>서울특별시 성동구 왕십리로 58, 서울숲포휴 709호</p>
+			</div>
+			<div class="f_select">
+				<div class="family"><a href="#">Family site</a></div>
+				<ul>
+					<li><a href="#">THE PITCH ONE</a></li>
+					<li><a href="#">에이치엔에스</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!--// #Footer -->
+</div>
+<!-- // WRAP -->
+
+<section class="alert_pop res_complete">
+	<div class="pop_inner">
+		<div class="pop_scroll">
+			<h3 class="pop_tit">예약이 완료 되었습니다</h3>
+			<div class="acc_info">
+				<dl>
+					<dt>계좌 번호</dt>
+					<dd>기업은행 002-114775-01-032</dd>
+				</dl>
+				<dl>
+					<dt>예금주</dt>
+					<dd>주식회사 에이치엔에스</dd>
+				</dl>
+				<dl>
+					<dt>총 결제금액</dt>
+					<dd>1,000,000원</dd>
+				</dl>
+				<p class="caution">입금 완료 후 예약이 확정됩니다</p>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn main_btn closed"><span>확인</span></a>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>

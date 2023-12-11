@@ -1,0 +1,1437 @@
+/* ************************************************************************************************************************************************************
+						《 컨텐츠 스타일 》
+************************************************************************************************************************************************************ */
+
+/* ============================== [ 예약 ] ========================================================================================== */
+.login_wrap {padding-top: 280px;}
+.login_content {max-width: 410px; padding: 0 15px; box-sizing: border-box; margin: 0 auto 250px;}
+
+.login_form .form_tit .logo_img {width: 180px; height: 106px; margin: 0 auto 56px;}
+.login_form .form_cotn {margin-top: 32px;}
+.login_form .form_cotn .inpt_wrap {display: flex;}
+.login_form .form_cotn .inpt_wrap input[type="text"],
+.login_form .form_cotn .inpt_wrap input[type="password"] {height: 48px; box-sizing: border-box; border-bottom: 1px solid #6E6E6E; flex:1;}
+.login_form .form_cotn .login_inpt .rdo_wrap {margin-top: 8px; justify-content: flex-end;}
+.login_form .form_cotn .login_inpt .rdo_wrap .form_rdo p {font-size: 14px; color: #a0a2a2;}
+.login_form .login_btn {margin-top: 56px; width: 100%;}
+.login_form .login_btn .btn {width: 100%; height: 56px; font-size: 18px; font-weight: 700;}
+.login_form .join_util {margin-top: 16px;display: flex; align-items: center; justify-content: space-between;}
+.login_form .join_util .find  ul {display: flex;}
+.login_form .join_util .find  ul li ~ li {position: relative; margin-left: 8px; padding-left: 8px;}
+.login_form .join_util .find  ul li ~ li::after {width: 1px; height: 16px; background-color: #A0A2A2; display: block; content: ''; position: absolute; left: 0; top: 4px;}
+.login_form .join_util .find  ul li a {color: #A0A2A2; font-size: 14px;}
+.login_form .join_util .join {font-size: 14px; color: #a0a2a2;}
+.login_form .sns_login {margin-top: 56px;}
+.login_form .sns_login .tit {position: relative; text-align: center;}
+.login_form .sns_login .tit::after {display: block; content: ''; width: 100%; height: 1px; background-color: #a0a2a2; position: absolute; left: 0; top: 50%;}
+.login_form .sns_login .tit span {color: #a0a2a2; padding: 0 6px; background-color: #fff; position: relative; z-index: 1;}
+.login_form .sns_login .tit span::after {display: block; content: ''; width: 100%; height: 100%; background-color: #fff; position: absolute; left: 0;top: 0; z-index: -1;}
+.login_form .sns_login ul {margin-top: 24px; display: flex; justify-content: center;}
+.login_form .sns_login ul li ~ li {margin-left: 26px;}
+.login_form .sns_login ul li a {display: block; width: 56px; height: 56px; border-radius: 50%; background-position: center; background-repeat: no-repeat; background-size: 20px;}
+.login_form .sns_login ul li a.kakao {background-color: #FEE500; background-image:url(../images/content/ico_kakao.svg)}
+.login_form .sns_login ul li a.naver {background-color: #03CF5D; background-image:url(../images/content/ico_naver.svg)}
+.login_form .sns_login ul li a.apple {background-color: #2F2F2F; background-image:url(../images/content/ico_apple.svg);background-position: center top 16px;}
+
+/* ============================== [ 예약 ] ========================================================================================== */
+
+/* -------------- 시설 ---------------  */
+
+/* 시설 리스트 */
+.fac_list > ul > li {padding-bottom: 80px; border-bottom: 1px solid #A0A2A2;}
+.fac_list > ul > li ~ li {margin-top: 40px;}
+.fac_list .group {display: flex; padding: 0 20px;}
+.fac_list .group .img {width: 334px; height: 184px; border-radius: 10px; overflow: hidden;}
+.fac_list .group .info_wrap {margin-left: 20px; flex:1;}
+.fac_list .group .info_wrap .tit_area {border-bottom: 1px solid #2E655B; padding-bottom: 24px; margin-bottom: 24px; display: flex; align-items: center;}
+.fac_list .group .info_wrap .tit_area .info_tit {display: flex; align-items: center;}
+.fac_list .group .info_wrap .name {font-size: 26px; font-weight: 700; margin-left: 12px; flex:1;}
+.fac_list .group .info_wrap .desc {font-size: 14px; margin-left: 12px; color: #2E655B;}
+.fac_list .group .detail_area {display: flex;}
+.fac_list .group .txt_wrap {position: relative; flex:1;}
+.fac_list .group .txt_wrap .address {padding-left: 20px; font-size: 18px; line-height: 18px; background: url(../images/content/ico_map.svg) no-repeat left top;}
+.fac_list .group .txt_wrap ul {position: absolute; left: 0; bottom: 0; display: flex; flex-wrap: wrap; width: 100%;}
+.fac_list .group .txt_wrap ul li {padding: 8px; color: #2E655B; font-size: 14px;}
+.fac_list .group .txt_wrap ul li::before {content: '#';}
+.fac_list .group .detail_area .btn_wrap {margin-left: auto;}
+
+@media only screen and (max-width:1024px) {
+	.fac_list .group {flex-direction: column;}
+	.fac_list .group .info_wrap {margin: 20px 0 0 0;}
+}
+@media only screen and (max-width:768px) {
+	.fac_list > ul > li {padding-bottom: 60px;}
+	.fac_list .group {padding: 0;}
+	.fac_list .group .img {width: 100%;}
+	.fac_list .group .info_wrap .tit_area {flex-direction: column; align-items: flex-start; padding-bottom: 20px; margin-bottom: 20px;}
+	.fac_list .group .info_wrap .name {font-size: 20px;}
+	.fac_list .group .info_wrap .desc  {margin: 12px 0 0 0;}
+
+	.fac_list .group .txt_wrap .address {font-size: 16px; line-height: 16px; background-size: 11px auto; padding-left: 18px;}
+	.fac_list .group .txt_wrap ul {position: relative; margin-top: 16px;}
+	.fac_list .group .txt_wrap ul li {font-size: 12px;}
+
+	.fac_list .group .detail_area {flex-direction: column;}
+	.fac_list .group .detail_area .btn_wrap {margin: 16px 0 0 0;}
+}
+
+/* -------------- 시설상세 ---------------  */
+
+/* 타이틀 영역 */
+.fac_tit {display: flex; align-items: flex-end; margin-bottom: 24px;}
+.fac_tit .tit_l {position: relative;}
+.fac_tit .tit_l h2 {font-size: 30px; font-weight: 700; margin-top: 16px; display: flex; align-items: center;}
+.fac_tit .tit_l .fav {font-size: 16px; font-weight: 400; margin-left: 16px; color: #A0A2A2; display: flex; align-items: center; cursor: pointer;}
+.fac_tit .tit_l .fav i {display: block; width: 14px; height: 18px; background: url(../images/content/ico_favorite_off.svg) no-repeat 0 0; background-size: 14px 18px; transition: .2s;}
+.fac_tit .tit_l .fav span {margin-left: 8px; user-select: none;}
+.fac_tit .tit_l .fav input:checked ~ i {background-image: url(../images/content/ico_favorite.svg);}
+.fac_tit .tit_r {margin-left: auto;}
+
+/* 갤러리 슬라이드 */
+.gallery_wrap {display: flex;}
+.gallery_main {flex:1;}
+.gallery_main .img {border-radius: 12px; overflow: hidden; height: 560px;}
+
+.thumb_page {margin-left: 20px; display: flex; flex-direction: column; position: relative; bottom: 0 !important; left: 0 !important; width: 180px !important;}
+.thumb_page .swiper-pagination-bullet {width: 180px; height: 125px; margin: 0 !important;}
+.thumb_page .swiper-pagination-bullet ~ .swiper-pagination-bullet {margin-top: 20px !important;}
+.thumb_page img {width: 100%; height: 100%; border-radius: 8px;}
+
+/* 시설 컨텐츠 */
+.fac_cotn {margin-top: 56px;}
+.fac_cotn .cotn_tit {display: flex; align-items: center; padding-bottom: 20px; border-bottom: 2px solid #A0A2A2;}
+.fac_cotn .cotn_tit h4 {font-size: 26px; font-weight: 700; line-height: 1em;}
+.fac_cotn .cotn_tit .account {margin-left: auto;}
+.fac_cotn .cotn_tit .account strong {font-weight: 700; color: #6E6E6E;}
+.fac_cotn .cotn_tit .account span {color: #2E655B; margin-left: 8px;}
+
+.s_tab_cont {margin-top: 40px;}
+.s_tab_cont .info_box {display: flex; gap:40px}
+.s_tab_cont .info_box .box {flex:1; height: 196px; box-sizing: border-box; border:1px solid #A0A2A2; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+.s_tab_cont .info_box .box span {margin-top: 16px; line-height: 1em;}
+.s_tab_cont .tag_wrap {margin-top: 56px; display: flex; flex-wrap:wrap; gap:16px}
+.s_tab_cont .tag_wrap span {line-height: 1em; border-radius: 30px; border:1px solid #A0A2A2; font-size: 18px; padding: 13px 32px; box-sizing: border-box;}
+.s_tab_cont .tag_wrap span::before {content: '#';}
+
+/* 대관요금 테이블 */
+.fee_tb {border-radius: 8px; overflow: hidden;}
+.fee_tb th {background-color:#00A580; height: 56px; text-align: center; font-weight: 700; color: #fff; box-sizing: border-box;}
+.fee_tb th ~ th {border-left: 1px solid #fff; width: 60%;}
+.fee_tb tr td {background-color: #fff; height: 56px; text-align: center; border-bottom: 1px solid #A0A2A2; box-sizing: border-box;}
+.fee_tb tr td ~ td {border-left: 1px solid #A0A2A2; width: 60%;}
+.fee_tb tr:last-child td {border-bottom: none;}
+.fee_tb tr.point td {color: #00A580; background-color: #F5F5F5;}
+
+/* 유의사항 */
+.notice_ol {margin-top: 40px; padding-left: 16px;}
+.notice_ol li {line-height: 2em;}
+.notice_ol li ul {padding-left: 20px;}
+.notice_ol > li:nth-child(1) {font-size: 20px; font-weight: 700; margin-bottom: 16px;}
+.notice_ol > li:nth-child(1) ul {margin-top: 5px;}
+.notice_ol > li.point {font-weight: 500; color: #2E655B; margin-bottom: 16px;}
+
+/* 환불규정 */
+.refund_li {margin-top: 40px;}
+.refund_li li {padding-left: 32px; position: relative;}
+.refund_li li::after {display: block; content: ''; width: 4px; height: 4px; border-radius: 50%; background-color: #2f2f2f; position: absolute; left: 18px; top: 7px;}
+.refund_li li ~ li {margin-top: 10px;}
+
+/* 구글지도 */
+.fac_map {margin-top: 40px; padding: 0 16px; display: flex; flex-direction: column;}
+.fac_map iframe {width: 100%;}
+.fac_map .address_info {height: 66px; box-sizing: border-box; padding: 0 10px; background-color: #F5F5F5; display: flex; align-items: center; justify-content: center;}
+.fac_map .address_info p {color: #00A580; font-size: 18px; padding-left: 20px; background: url(../images/content/ico_mpa_gr.svg) no-repeat left top 3px;}
+
+@media only screen and (max-width:1024px) {
+	.gallery_wrap {display: block;}
+	.thumb_page {margin: 20px 0 0 0; flex-direction: row; width: 100% !important; }
+	.thumb_page .swiper-pagination-bullet {width: auto; flex:1; height: 144px;}
+	.thumb_page .swiper-pagination-bullet ~ .swiper-pagination-bullet {margin: 0 0 0 20px !important;}
+}
+
+@media only screen and (max-width:768px) {
+	/* 타이틀 영역 */
+	.fac_tit {display: block; margin-bottom: 20px;}
+	.fac_tit .tit_l h2 {font-size: 20px;}
+	.fac_tit .tit_l .fav {font-size: 14px; position: absolute; right: 0; top: 0;}
+	.fac_tit .tit_l .fav i {width: 12px; height: 15px; background-size: 12px 15px;}
+	.fac_tit .tit_r {margin: 24px 0 0 0;}
+	.fac_tit .tit_r .btn_wrap .btn {height: 56px; width: 100%;}
+
+	/* 갤러리 슬라이드 */
+	.gallery_main .img {height: 232px;}
+	.thumb_page {margin-top: 12px;}
+	.thumb_page .swiper-pagination-bullet {height: 78px;}
+	.thumb_page .swiper-pagination-bullet ~ .swiper-pagination-bullet {margin: 0 0 0 6px !important;}
+
+	/* 시설 컨텐츠 */
+	.fac_cotn {margin-top: 30px;}
+	.fac_cotn .cotn_tit {display: block; padding-left: 8px; padding-bottom: 16px; border-bottom:1px solid #9D9D9D;}
+	.fac_cotn .cotn_tit h4 {font-size: 18px; font-weight: 400;}
+	.fac_cotn .cotn_tit .account {margin: 16px 0 0 0; font-size: 12px;}
+	.fac_cotn .cotn_tit .account span {color: #00A580;}
+
+	.s_tab_cont {margin-top: 20px;}
+	.s_tab_cont .info_box {gap:10px}
+	.s_tab_cont .info_box .box {height: 97px;}
+	.s_tab_cont .info_box .box .img {width: 45px;}
+	.s_tab_cont .info_box .box span {font-size: 12px; margin-top: 8px;}
+
+	.s_tab_cont .tag_wrap {margin-top: 20px; gap:8px}
+	.s_tab_cont .tag_wrap span {font-size: 16px; padding: 9px 20px;}
+
+	/* 대관요금 테이블 */
+	.fee_tb th ~ th,
+	.fee_tb td ~ td {width: 50%;}
+	.fee_tb tr td {font-size: 14px;}
+
+	/* 유의사항 */
+	.notice_ol {margin-top: 30px; padding-left: 0;}
+	.notice_ol li {line-height: 1.2em; font-size: 14px;}
+	.notice_ol li ~ li {margin-top: 10px;}
+	.notice_ol li ul {padding-left: 10px; margin-top: 10px;}
+	.notice_ol > li:nth-child(1) {font-size: 18px; margin-bottom: 32px;}
+	.notice_ol > li:nth-child(1) ul {margin-top: 10px;}
+	.notice_ol > li.point {margin-bottom: 32px;}
+
+	/* 환불규정 */
+	.refund_li {margin-top: 30px;}
+	.refund_li li {padding-left: 24px; }
+	.refund_li li::after {left: 10px;}
+
+	/* 구글지도 */
+	.fac_map {margin-top: 30px; padding: 0;}
+	.fac_map .address_info {height: 50px;}
+	.fac_map .address_info p {font-size: 14px; padding-left: 18px; background-size: 9px auto;}
+}
+
+/* -------------- 예약하기 ---------------  */
+.content_tit_area .amount {color: #00A580; font-size: 26px; font-weight: 700;}
+.content_tit_area .amount em {margin-left: 8px; color: #2F2F2F;}
+
+/* 예약폼 */
+.res_form {display: flex;}
+.res_form .group {flex:1; box-sizing: border-box;}
+.res_form .group.date_wrap {padding-left: 10px;}
+.res_form .group ~ .group {padding-left: 20px; margin-left: 20px; border-left:1px solid #A0A2A2}
+.res_form .item ~ .item {margin-top: 32px;}
+.res_form .form_tit {padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1px solid #A0A2A2; padding-left: 32px; line-height: 28px; font-size: 18px; font-weight: 700; color: #6E6E6E; display: flex; align-items: center; background-position: left top; background-repeat: no-repeat; background-size: 28px;}
+.res_form .form_tit span {margin-left: 4px; color: #00A580; font-size: 16px; font-weight: 400;}
+.res_form .form_tit.t_date {background-image: url(../images/content/ico_res_date.svg);}
+.res_form .form_tit.t_fac {background-image: url(../images/content/ico_res_fac.svg);}
+.res_form .form_tit.t_std {background-image: url(../images/content/ico_res_std.svg);}
+.res_form .form_tit.t_team {background-image: url(../images/content/ico_res_team.svg);}
+.res_form .form_tit.t_time {background-image: url(../images/content/ico_res_time.svg);}
+.res_form .form_tit.t_vs {background-image: url(../images/content/ico_res_vs.svg);}
+.res_form .form_tit.t_rank {background-image: url(../images/content/ico_res_rank.svg);}
+.res_form .form_tit.t_plus {background-image: url(../images/content/ico_res_plus.svg);}
+
+/* 비회원 */
+.non_mem_wrap {margin-top: 48px;}
+.non_form .inpt_wrap {display: flex;}
+.non_form .inpt_wrap ~ .inpt_wrap {margin-top: 20px;}
+.non_form .inpt_wrap .tit {width: 68px; color: #6e6e6e; padding-top: 5px;}
+.non_form .inpt_wrap .inpt {flex:1;}
+.non_form .inpt_wrap input {border:1px solid #a0a2a2; border-radius: 2px; height: 32px; padding: 0 16px; box-sizing: border-box;}
+.non_form .inpt_wrap textarea {border:1px solid #a0a2a2; border-radius: 2px; height: 130px; padding: 0 16px; box-sizing: border-box; outline: none;}
+.res_form .non_form .chk_wrap {margin-top: 24px;}
+.res_form .non_form .chk_wrap .form_chk {align-items: flex-start;}
+.res_form .non_form .chk_wrap .form_chk i {margin-top: 3px;}
+.res_form .non_form .chk_wrap .form_chk p {flex:1; font-weight: 400; color: #6e6e6e;}
+/* 달력 */
+.res_form .datepiacker {margin-top: 24px;}
+.ui-datepicker table {border-collapse:separate; border-spacing:1px 3px; margin-bottom: 20px;}
+.ui-widget.ui-widget-content {padding: 0; width: 310px; border:none; margin: 0 auto;}
+.ui-widget-header {background-color: #fff; color: #6E6E6E;}
+.ui-datepicker .ui-datepicker-header {margin-bottom: 24px; padding: 0; border:none; display: flex; align-items: center; justify-content: center;}
+.ui-datepicker .ui-datepicker-title {padding:0 28px; font-size: 22px; color: #6E6E6E; font-weight: 900; line-height: 1em; margin: 0;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {cursor: pointer; border:none !important; width: 9px; height: 18px; position: relative; left: inherit !important; top: inherit !important; right: inherit !important;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {display: none;}
+.ui-datepicker .ui-datepicker-prev {background: url(../images/content/arr_date_l.svg) no-repeat 0 0;}
+.ui-datepicker .ui-datepicker-next {order:3; background: url(../images/content/arr_date_r.svg) no-repeat 0 0;}
+.ui-datepicker th {padding: 10px 13px; font-size: 14px; font-weight: 700; color: #6E6E6E;}
+.ui-datepicker td {padding: 3px 1px; height: 36px; box-sizing: border-box; }
+.ui-state-default, .ui-widget-content .ui-state-default { border:none; color: #6e6e6e; background: transparent; font-size: 14px; text-align: center;}
+.ui-state-disabled, .ui-widget-content .ui-state-disabled {opacity: 1;}
+.ui-datepicker-other-month {background-color: #fff !important; color: #A0A2A2;}
+.ui-datepicker-other-month .ui-state-default {color: #A0A2A2;}
+.ui-datepicker td a {padding: 0;}
+.ui-datepicker-current-day,
+.ui-state-default.ui-state-active {background-color: #00A580; color: #fff;}
+.ui-state-disabled {background-color: #A0A2A2; color: #6E6E6E !important;}
+
+.res_form .opt {display: flex; justify-content: flex-end; width:310px; margin:0 auto;}
+.res_form .opt span {font-size: 14px; position: relative; padding-left: 18px; line-height: 14px;}
+.res_form .opt span ~ span {margin-left: 12px;}
+.res_form .opt span::after {display: block; content: ''; width: 14px; height: 14px; position: absolute; left: 0; top: 0; background-color: #00A580;}
+.res_form .opt span.disable::after {background-color: #A0A2A2;}
+.res_form .time_li {display: flex; flex-wrap: wrap; gap: 8px 10px;}
+.res_form .time_li label {cursor: pointer; width: calc(33.33% - 7px); display: flex;}
+.res_form .time_li label span {font-size: 14px; line-height: 28px; text-align: center; width: 100%; height: 30px; border-radius: 2px; background-color: #f5f5f5; color: #00a580; transition: .2s;}
+.res_form .time_li label input:checked ~ span {background-color: #00A580; color: #fff;}
+.res_form .tab_group ~ .tab_group {margin-top: 30px;}
+.res_form .on .tab_group ~ .tab_group {margin-top: 48px;}
+.res_form .tab_cotn {display: none;}
+.res_form .chk_wrap .form_chk i {width: 16px; height: 16px; background-size: 12px auto;}
+.res_form .chk_wrap .form_chk p {font-size: 18px; font-weight: 700; color: #6E6E6E;}
+.res_form .caution {margin-top: 12px; margin-bottom: 32px; font-size: 14px; color: #2E655B; padding-left: 9px; position: relative;}
+.res_form .caution::before {content: '*'; position: absolute; left: 0; top: 2px;}
+.res_form textarea {border:1px solid #A0A2A2; border-radius: 2px; box-sizing: border-box; resize: none;}
+.res_form .tab_group textarea {margin-top: 32px; height: 135px; padding: 14px 16px; width: 100%; }
+
+/* 예약완료 팝업 */
+.res_complete .pop_tit {margin-top:20px;}
+.res_complete .acc_info {margin-top:48px;}
+.res_complete .acc_info dl {display:flex; align-items:center; justify-content:space-between;}
+.res_complete .acc_info dl ~ dl {margin-top:24px;}
+.res_complete .acc_info dl dt {font-size:20px; font-weight:700;}
+.res_complete .acc_info dl dd {font-size:18px;}
+.res_complete .caution {margin-top:24px; color:#FF3030; font-size:18px; font-weight:700; text-align:center;}
+
+@media only screen and (max-width:1024px) {
+	/* -------------- 예약하기 ---------------  */
+	.content_tit_area .amount em {display:block; margin-left:0;}
+
+	.sub_content > .res_inner {max-width: 502px; padding:0 15px;}
+	.sub_content > .res_inner .content_tit_area {padding:0 0 16px; align-items: flex-end;}
+	.res_form {display:block;}
+	.res_form .group ~ .group {padding:20px 0 0 0; margin:20px 0 0 0; border-left: none; border-top:1px solid #A0A2A2}
+	.res_form .group.date_wrap {padding-left:0;}
+
+}
+
+@media only screen and (max-width:768px) {
+	.content_tit_area .amount {font-size:18px;}
+	.content_tit_area .amount em {display:inline-block; margin-left:4px;}
+	.sub_content > .res_inner {position:relative; padding-bottom:96px;}
+	.sub_content > .res_inner .content_tit_area {padding-left:8px;}
+	.sub_content > .res_inner .content_tit_area .btn_wrap {position:absolute; left:15px; bottom:0; width:calc(100% - 30px);}
+	.sub_content > .res_inner .content_tit_area .btn_wrap .btn {width:100%; height:56px;}
+	.res_form .time_li {gap:8px;}
+	.res_form .time_li label {width:calc(33.33% - 6px);}
+	.res_form .chk_wrap .form_chk p {font-size:16px;}
+	.res_form .tab_group textarea {font-size:14px;}
+
+	/* 예약완료 팝업 */
+	.res_complete .pop_tit {margin-top:16px; color:#2E655B; font-size:20px;}
+	.res_complete .acc_info {margin-top:40px;}
+	.res_complete .acc_info dl ~ dl {margin-top:16px;}
+	.res_complete .acc_info dl dt {font-size:14px;}
+	.res_complete .acc_info dl dd {font-size:14px;}
+	.res_complete .caution {font-size:16px;}
+
+}
+
+/* -------------- 비회원 예약조회 ---------------  */
+.sub_content > .inner.ref_inner {max-width: 410px; padding:0 15px;}
+.ref_inner .title {text-align:center; font-size:30px; font-weight:700;}
+.ref_form {margin-top:56px;}
+.ref_form label {display:flex; align-items:center;}
+.ref_form label ~ label {margin-top:16px;}
+.ref_form label span {color:#6E6E6E; margin-right:16px;}
+.ref_form label input {flex:1; height:48px; border-radius: 2px; border:1px solid #A0A2A2; box-sizing:border-box; padding:0 16px;}
+.ref_inner .btn_wrap {margin-top:56px;}
+.ref_inner .btn_wrap .btn {height:56px; width:100%;}
+
+@media only screen and (max-width:768px) {
+	.ref_inner .title {font-size:26px;}
+	.ref_form {margin-top:40px;}
+	.ref_form label ~ label {margin-top:8px;}
+	.ref_form label span {margin-right:10px;}
+	.ref_inner .btn_wrap {margin-top:40px;}
+}
+
+/* -------------- 예약내역 ---------------  */
+.ref_list .group {display:flex; padding-bottom:80px; padding-left:20px; padding-right:20px; border-bottom: 1px solid #A0A2A2;}
+.ref_list .group ~ .group {margin-top:40px;}
+.ref_list .group .img {width:280px; height:176px; border-radius: 10px; overflow:hidden;}
+.ref_list .group .info_wrap {flex:1; margin-left:20px;}
+.ref_list .state {font-size:14px; font-weight:700; color:#57EE9B;}
+.ref_list .name {margin-top:5px; font-size:18px; font-weight:700;}
+.ref_list .date {color: #6E6E6E; font-weight: 700; font-size: 14px;}
+.ref_list .date .state {margin-right: 8px;}
+.ref_list ul {margin-top:5px;}
+.ref_list ul li {display:flex; align-items:center;}
+.ref_list ul li ~ li {margin-top:5px;}
+.ref_list ul li strong {font-weight:700; color:#00A580;}
+.ref_list ul li span {font-weight:700; margin-left:8px; color: #6E6E6E;}
+.ref_list .info_label {margin-top:33px; display:flex; flex-wrap: wrap; justify-content:flex-end; gap:8px}
+.ref_list .info_label .item {display:flex; align-items:center; padding:13px 16px; border-radius: 30px; border:1px solid #00A580;}
+.ref_list .info_label .item strong {color:#00A580; font-weight:700;}
+.ref_list .info_label .item span {color: #6e6e6e; margin-left:8px;}
+
+@media only screen and (max-width:1024px) {
+	.ref_list .group {padding:0 0 56px;}
+}
+@media only screen and (max-width:768px) {
+	.ref_list .group {display:block;}
+}
+
+@media only screen and (max-width:768px) {
+	.ref_tit {margin-bottom:88px !important; position:relative;}
+	.ref_tit .nice-select.sort_select {position:absolute; right:0; bottom:-48px;}
+	.ref_list .group .img {width:100%;}
+	.ref_list .group .info_wrap {margin:20px 0 0 0;}
+	.ref_list ul {display:flex;}
+	.ref_list ul li {font-size:14px;}
+	.ref_list ul li ~ li {margin:0 0 0 8px;}
+	.ref_list ul li span {margin-left:4px;}
+	.ref_list .date .state {display: block; margin-bottom: 8px;}
+	.ref_list .info_label {margin-top:24px; justify-content: flex-start;}
+	.ref_list .info_label .item {font-size:14px;}
+}
+
+/* -------------- 신청완료 ---------------  */
+.compl {max-width: 380px; width:100%; margin:0 auto;}
+.compl .title {font-weight:700; font-size:30px; color: #2E655B; text-align:center;}
+.compl .com_ref {display:flex; margin-top:40px;}
+.compl .com_ref .img {width:200px; height:120px; border-radius: 10px; overflow:hidden;}
+.compl .com_ref .info_wrap {margin-left:20px; flex:1;}
+.compl .com_ref .state {display:block; margin-top:10px; font-size:14px; font-weight:700; color:#57EE9B;}
+.compl .com_ref .name {margin-top:5px; font-size:18px; font-weight:700;}
+.compl .com_ref ul {margin-top:5px;}
+.compl .com_ref li {display:flex; align-items:center; font-weight:700;}
+.compl .com_ref li ~ li {margin-top:5px;}
+.compl .com_ref li strong {color:#00A580;}
+.compl .com_ref li span {color:#6E6E6E; margin-left:8px;}
+.compl .info_box {display:flex; justify-content:center; flex-direction: column; margin-top:20px; border:1px solid #00A580; border-radius: 10px; padding:20px 80px; box-sizing:border-box;}
+.compl .info_box dl {display:flex; align-items:center;}
+.compl .info_box dl ~ dl {margin-top:6px;}
+.compl .info_box dl dt {width:78px; font-weight:700; color:#00A580;}
+.compl .info_box dl dd {margin-left:40px;color:#6E6E6E;}
+.compl .btn_wrap {margin-top:40px;}
+.compl .btn_wrap .btn ~ .btn {margin-left:8px;}
+.com_ref .res_form .item ~ .item {margin-top:24px;}
+.com_ref .std_name {margin:35px 0; font-size:18px; font-weight:700; text-align:center;}
+.refund_wrap {margin-top:24px;}
+.refund_wrap .txt {text-align:center; color:#6E6E6E;}
+.refund_wrap .refund_info {display:flex; margin-top:32px;}
+.refund_wrap .refund_info select{font-size:14px; height:32px; color:#6e6e6e; width:87px; box-sizing:border-box; padding:0 20px 0 8px; border-radius: 2px; border: 1px solid #A0A2A2; background: url(../images/content/arr_select_f.svg) no-repeat right 8px center; background-size: 11px auto;}
+.refund_wrap .refund_info input {width:195px; margin-left:8px; border-radius: 2px; border:1px solid #A0A2A2; height:32px; box-sizing:border-box; padding:0 8px; font-size:14px;}
+.refund_wrap .refund_info input.name_inpt {width:80px;}
+
+@media only screen and (max-width:768px) {
+	.compl .title {font-size:26px;}
+	.compl .com_ref {margin-top:24px; display:block;}
+	.compl .com_ref .img {width:100%; height:176px;}
+	.compl .com_ref .info_wrap {margin:24px 0 0 0;}
+	.compl .com_ref ul {display:flex;}
+	.compl .com_ref li {font-size:14px;}
+	.compl .com_ref li ~ li {margin:0 0 0 16px;}
+	.compl .info_box {padding:20px 0 20px 58px;}
+	.compl .btn_wrap {margin-top:24px;}
+	.com_ref .std_name {margin:24px 0;}
+	.com_ref .res_form .item ~ .item {margin-top:12px;}
+
+	.refund_wrap {margin-top:30px;}
+	.refund_wrap .refund_info {display:block; margin-top:8px;}
+	.refund_wrap .refund_info select{height:48px; width:100%; padding:0 30px 0 14px; background: url(../images/content/arr_select_f.svg) no-repeat right 14px center; background-size: 11px auto;}
+	.refund_wrap .refund_info input {width:100%; margin:8px 0 0 0; height:48px; padding:0 14px;}
+	.refund_wrap .refund_info input.name_inpt {width:100%;}
+}
+
+/* ============================== [ 대회 ] ========================================================================================== */
+
+/* -------------- 리그 목록 ---------------  */
+.content_tit_area.compt_area {align-items: flex-end;}
+.content_tit_area.compt_area .tit_l {display:flex; gap:4px;}
+.compt_list .group {padding:40px 0; margin:0 25px; border-bottom: 1px solid #A0A2A2; display:flex; align-items:center;}
+.my_compt.compt_list .group {margin:0 10px; padding:40px 20px 60px;}
+.compt_list .g_inner {display:flex; padding-left:5px;}
+.compt_list .img {margin-right:40px; width:280px; height:152px; border-radius: 10px; overflow:hidden;}
+.compt_list .txt_wrap .state {line-height:25px; padding-left:27px; font-size:14px; font-weight:700; color:#57EE9B; background: url(../images/content/ico_star.svg) no-repeat left center;}
+.compt_list .txt_wrap .state.end {color:#A0A2A2; background-image: url(../images/content/ico_star_off.svg);}
+.compt_list .txt_wrap .name {margin-top:10px; font-size:20px; font-weight:700;}
+.compt_list .txt_wrap .date {margin-top:6px; color:#6E6E6E;}
+
+.compt_list .group > .btn_wrap {margin-left:auto; margin-right:5px;}
+.compt_list .group.fixed {background-color:#2F2F2F; margin:0; padding:40px 25px;;}
+.compt_list .group.fixed .name {color:#fff;}
+.compt_list .group.fixed .date {color:#57EE9B;}
+@media only screen and (max-width:1024px) {
+	.compt_list .group {margin:0; padding:40px 25px;}
+	.my_compt.compt_list .group {margin:0; padding:40px 20px 60px;}
+	.compt_list .img {width:260px; margin-right:30px;}
+	.content_tit_area.compt_area .search_wrap {width:270px;}
+}
+@media only screen and (max-width:768px) {
+	.content_tit_area.compt_area {display:block; padding:16px 0;}
+	.content_tit_area.compt_area .tit_l {gap:6px; margin-bottom:16px;}
+	.content_tit_area.compt_area .nice-select.sort_select {min-width: 0;}
+	.content_tit_area.compt_area .search_wrap {width:100%;}
+
+	.compt_list .group {display:block; padding:20px 20px 40px;}
+	.compt_list .group.fixed {padding:20px 15px 40px; margin:0 -15px;}
+	.compt_list .g_inner {display:block; padding-left:0;}
+	.compt_list .img {margin:0 0 20px 0; height:180px; width:100%;}
+	.compt_list .txt_wrap .name {font-size:18px;}
+	.compt_list .txt_wrap .date {font-size:14px;}
+	.compt_list .group > .btn_wrap {padding:0; margin-top:40px;}
+	.compt_list .group > .btn_wrap .btn {width:100%;}
+
+	.my_compt.compt_list .group {padding:36px 16px;}
+	.my_compt.compt_list .group > .btn_wrap {margin-top:20px;}
+}
+
+/* -------------- 리그 상세 ---------------  */
+.compt_board {background-color:#2F2F2F; margin-bottom:20px; position:relative;}
+.compt_board .board_wrap {padding:40px 56px 0;}
+.compt_board .board_wrap .state {line-height:25px; padding-left:27px; font-size:14px; font-weight:700; color:#57EE9B; background: url(../images/content/ico_star.svg) no-repeat left center;}
+.compt_board .board_wrap .name {margin-top:6px; color:#fff; font-size:26px;}
+.board_wrap {display:flex; align-items:center;}
+.board_wrap .info {margin-top:32px;}
+.board_wrap .info ul {display:flex;}
+.board_wrap .info li {display:flex; align-items:center;}
+.board_wrap .info li ~ li {margin-left:24px;}
+.board_wrap .info li span {color:#57ee9b; padding:14px 24px 14px 56px; border:1px solid; border-radius: 50px; background-position: left 24px center; background-repeat:no-repeat;}
+.board_wrap .info li:nth-child(1) span {background-image: url(../images/content/ico_board_01.svg);}
+.board_wrap .info li:nth-child(2) span {background-image: url(../images/content/ico_board_02.svg);}
+.board_wrap .info li p {color:#fff; font-size:18px; margin-left:8px;}
+.board_wrap .btn_wrap {margin-left:auto;}
+.board_tab {max-width: 780px; width:100%; margin:48px auto 0; box-sizing:border-box; padding:0 16px;}
+.board_tab ul {display:flex; justify-content:space-between;}
+.board_tab li a {color:#FFFFFF; position:relative; display:block; height:40px;}
+.board_tab li a::after {display:block; content: ''; width:100%; height:3px; position:absolute; left:0; bottom:0;}
+.board_tab li.on a {color:#57EE9B;}
+.board_tab li.on a::after {background-color:#57EE9B;}
+.board_img {width:100%; height:250px;}
+.board_img img {width:100%; height:100%; object-fit: cover;}
+
+.board_intro {margin-top:80px;}
+.board_intro dl {display:flex;}
+.board_intro dl ~ dl {margin-top:32px;}
+.board_intro dl dt {width:110px; font-weight:700; line-height:20px;}
+.board_intro dl dd {padding-left:16px; line-height:20px; border-left:2px solid #2f2f2f; flex:1;}
+.board_intro dl dd a {padding-left:26px; background: url(../images/content/ico_down.svg) no-repeat left center;}
+
+/* 신청하기 */
+.apply_lg {padding-bottom:32px; border-bottom:1px solid #A0A2A2;}
+.apply_lg li {display:flex; padding: 0 20px;}
+.apply_lg li ~ li {margin-top:32px;}
+.apply_lg li .tit {width:176px; font-weight:700;}
+.apply_lg li .txt {flex:1;}
+.apply_lg li .select_box {max-width:280px;}
+.apply_lg .app_02 li {min-height: 32px;}
+.apply_lg .app_02 li .tit {padding-top:5px;}
+.apply_lg .app_02 li .txt {padding-top:5px;}
+.apply_lg .player_li {max-width:280px; width:100%;}
+.apply_lg .player_li .btn_player {margin-bottom:20px; font-size:14px; color:#6E6E6E; display:block; width:100%; height:32px; border:1px solid #A0A2A2; padding:6px 32px 6px 16px; box-sizing:border-box; background: url(../images/content/ico_search_gr.svg) no-repeat right 16px center;}
+.apply_lg ~ .btn_wrap {margin-top:56px; justify-content:center;}
+
+/* 선수명단 선택 팝업 */
+.player_pop .search_form {display:flex;}
+.player_pop .search_form .search_wrap {width:65%;}
+.player_pop .search_form .btn_wrap {margin:0 0 0 4px; width:33.6%;}
+.player_pop .search_form .btn_wrap .btn {width:100%;}
+.player_pop .player_search {margin-top:40px;}
+.player_pop .player_search ul {margin-top:10px;}
+.player_pop .player_search ul li {color:#2E655B; font-size:14px; padding-left:6px; position:relative;}
+.player_pop .player_search ul li ~ li {margin-top:5px;}
+.player_pop .player_search ul li::before {content: '*'; position:absolute; left:0; top:3px;}
+.player_pop .plus_player {margin-top:40px;}
+.player_pop .plus_player li {display:flex; align-items:center; padding:10px 0; border-bottom: 1px solid #2f2f2f;}
+.player_pop .plus_player li:first-child {border-top:2px solid #2f2f2f;}
+.player_pop .plus_player li:last-child {border-bottom-width: 2px;}
+.player_pop .plus_player .img {width:32px; height:32px; border-radius: 50%; margin-right:10px;}
+.player_pop .plus_player .name {margin-right:10px; font-size:14px;}
+.player_pop .plus_player input {width:120px; height:32px; border-radius: 2px; padding:0 12px; box-sizing:border-box; font-size:14px; border:1px solid #A0A2A2}
+.player_pop .plus_player .plus {margin-left:auto;}
+.player_pop .plus_player .plus span {position:relative; padding-right:20px; display:block;}
+.player_pop .plus_player .plus span::after {display:block; content: ''; background: url(../images/content/ico_more.svg) no-repeat 0 0; background-size: 12px auto; width:12px; height:12px; position:absolute; right:0; top:calc(50% - 6px);}
+
+@media only screen and (max-width:1500px) {
+	.board_wrap .btn_wrap {position:absolute; right:56px; top:48px;}
+}
+@media only screen and (max-width:1024px) {
+	.compt_board .board_wrap {padding:48px 56px 0;}
+	.board_wrap .info ul {display:block;}
+	.board_wrap .info li ~ li {margin:20px 0 0 0;}
+	.board_intro {padding-left:20px;}
+}
+@media only screen and (max-width:768px) {
+	.compt_board {margin: 0 -15px;}
+	.compt_board .board_wrap {padding:20px 15px 0;}
+	.compt_board .board_wrap .name {font-size:18px;}
+	.board_wrap {display:block;}
+	.board_wrap .info {margin-top:20px;}
+	.board_wrap .btn_wrap {position:relative; right:inherit; top:inherit; margin-top:40px;}
+	.board_wrap .btn_wrap .btn {width:100%;}
+	.board_wrap .info ul {display:flex; justify-content:center;}
+	.board_wrap .info li {flex-direction: column; justify-content:center;}
+	.board_wrap .info li ~ li {margin:0 0 0 24px;}
+	.board_wrap .info li p {margin:10px 0 0 0; font-size:16px; text-align:center;}
+	.board_wrap .info li span {padding:10px 16px 10px 42px; background-size: auto 16px; background-position: left 16px center;}
+	.board_tab li a {font-size:12px; font-weight:500; height:32px;}
+
+	.board_img {margin-top:30px; height:180px;}
+	.board_intro {margin-top:40px; padding:0 10px;}
+	.board_intro dl ~ dl {margin-top:24px;}
+	.board_intro dl dt {width:96px; font-size:14px;}
+	.board_intro dl dd {padding-left:8px; font-size:14px;}
+
+	/* 신청하기 */
+	.apply_lg {padding-bottom:24px}
+	.apply_lg li {display:block; padding: 0;}
+	.apply_lg li ~ li {margin-top:24px;}
+	.apply_lg li .tit {margin-bottom:16px;}
+	.apply_lg li .select_box {max-width: 100%;}
+	.apply_lg .app_02 li .tit {padding-top:0;}
+	.apply_lg .app_02 li .txt {padding-top:0;}
+	.apply_lg .player_li {max-width: 100%;}
+	.apply_lg .player_li .btn_player {height:48px; padding:13px 32px 12px 14px;}
+	.apply_lg ~ .btn_wrap {margin-top:40px;}
+
+	/* 선수명단 선택 팝업 */
+	.player_pop .player_search {margin-top:30px;}
+	.player_pop .search_form {flex-direction: column;}
+	.player_pop .search_form .search_wrap {width:100%;}
+	.player_pop .search_form .btn_wrap {width:100%; margin:8px 0 0 0;}
+	.player_pop .plus_player {margin-top:30px;}
+	.player_pop .plus_player input {width:100px;}
+}
+
+/* 팀리스트 */
+.compt_team {margin-top:40px; padding:0 20px;}
+.compt_team ul {background-color:#F5F5F5; padding:0 20px;}
+.compt_team ul li {padding:20px 0; display:flex; align-items:center;}
+.compt_team ul li:not(:last-child) {border-bottom: 1px solid #6e6e6e;}
+.compt_team ul li .team_name {display:flex; align-items:center;}
+.compt_team ul li .team_name .img {width:48px; height:48px; border-radius: 50%;}
+.compt_team ul li .team_name p {font-size:18px;font-weight:700; margin-left:24px;}
+.compt_team ul li .btn_wrap {margin-left:auto;}
+.compt_team ul li .btn_wrap .btn {width:128px;}
+.compt_team ul li .btn_wrap .btn ~ .btn {margin-left:8px;}
+
+/* -------------- 리그 순위 ---------------  */
+.rank_wrap {margin-top:40px;}
+.rank_srch {padding-bottom:16px; border-bottom: 2px solid #2f2f2f;}
+.rank_srch .search_wrap {margin-left:auto;}
+.rank_wrap .list_tab {padding-left:10px; margin-top:20px;}
+.group_list {margin-top:20px; border-top: 1px solid #A0A2A2;}
+.group_list .acc_g .ctrl {position:relative; display:block; padding:16px 20px; border-bottom: 1px solid #A0A2A2; font-weight:700;}
+.group_list .acc_g .ctrl::after {display:block; content: ''; background: url(../images/content/arr_rank.svg) no-repeat 0 0; width:18px; height:10px; position:absolute; right:20px; top: calc(50% - 5px); transition: .2s;}
+.group_list .acc_g.on .ctrl::after {transform: rotate(180deg);}
+.group_list .acc_g .acc_cotn {display:none; padding:40px 80px; background-color:#F5F5F5;}
+
+
+
+/* -------------- 경기일정 ---------------  */
+.stage_box {padding:40px 146px; margin:40px auto 0; background-color:#F5F5F5; width:calc(100% - 40px); box-sizing:border-box;}
+.stage_box .tit {text-align:center; font-size:20px; font-weight:700;}
+.stage_slide {margin-top:32px; padding-bottom:40px;}
+.stage_slide .g_name {font-size:20px;font-weight:700; margin-bottom:12px;}
+.stage_slide .stage_table {border-radius: 8px; overflow:hidden; box-shadow: 1px 2px 4px rgba(0, 0, 0, .15); width:99%;}
+.stage_slide .stage_table .tb_head {display:flex;}
+.stage_slide .stage_table .tb_head .th {padding:10px 0; flex:1; background-color:#00A580; text-align:center; color:#fff; font-weight:700; }
+.stage_slide .stage_table .tb_head .th ~ .th {border-left: 1px solid #fff;}
+.stage_slide .stage_table .tb_body .group {display:flex;}
+.stage_slide .stage_table .tb_body .group:not(:last-child) {border-bottom: 1px solid #A0A2A2;}
+.stage_slide .stage_table .tb_body .td {flex:1; text-align:center; padding:10px 8px; background-color:#fff; word-break: break-all;}
+.stage_slide .stage_table .tb_body .td ~ .td {border-left: 1px solid #A0A2A2;}
+.stage_slide .stage_bullet {position:absolute; bottom:0;}
+.stage_slide .stage_table .td.td_rank {padding:1px 8px;}
+.stage_slide .stage_table .td.td_rank .rank_label {width:29px; height:38px; padding-top:5px; box-sizing:border-box; margin:0 auto; background-size: 100% auto; color:#fff; font-weight:700; background-position:top center; background-repeat: no-repeat; background-image: url(../images/content/rank_03.png);}
+.stage_slide .stage_table .group.first .td.td_rank .rank_label {background-image: url(../images/content/rank_01.png);}
+.stage_slide .stage_table .group.second .td.td_rank .rank_label {background-image: url(../images/content/rank_02.png);}
+
+.schedule_wrap {margin:56px auto 0; width:calc(100% - 40px); box-sizing:border-box;}
+.schedule_wrap .tit {margin-bottom:24px; font-weight:700; font-size:26px; padding-bottom:20px; border-bottom: 2px solid #A0A2A2;}
+.schedule_box {padding:40px 20px; background-color:#f5f5f5;}
+.schedule_box .list_tab {margin:20px 10px;}
+.schedule_box ul {border-top:1px solid #A0A2A2;}
+.schedule_box li {display:flex; align-items:center; justify-content:space-between; padding:26px 10px; border-top:1px solid #00A580;}
+.schedule_box li:first-child {border-top:none;}
+.schedule_box li .scd_name {max-width: 220px; text-align:center;}
+.schedule_box li .scd_name .date {font-weight:500;}
+.schedule_box li .scd_name .info {font-size:14px; margin-top:4px;}
+.schedule_box li .btn_wrap .btn {width:128px;}
+
+/* 토너먼트 */
+.schedule_box.t_box {padding:40px 60px ; overflow-x:auto;}
+.tournament {width:1020px; }
+.tournament .round {gap:0 20px; display:flex; padding-bottom:20px; position:relative;}
+.tournament .round.pb10 {padding-bottom:10px;}
+.tournament .round:last-child {padding-bottom:0;}
+.tournament .round .group {position:relative;}
+.tournament .round.r_4 .group {width:calc(25% - 8px);}
+.tournament .round.r_2 .group {width:calc(50% - 10px);}
+.tournament .round.r_3 {width:760px; margin:0 auto;}
+.tournament .round.r_3 .group {width:calc(33.33% - 14px);}
+.tournament .round.r_1 .group {width:100%;}
+
+.tournament .round .group.qt_top::after {display:block; content: ''; width:260px; height:1px; background-color: #a0a2a2; position:absolute; left:50%; transform: translateX(-50%); top:-10px;}
+.tournament .round .group.qt_bottom::after {display:block; content: ''; width:260px; height:1px; background-color: #a0a2a2; position:absolute; left:50%; transform: translateX(-50%); bottom:-10px;}
+.tournament .round .group.sm_top::after {display:block; content: ''; width:521px; height:1px; background-color: #a0a2a2; position:absolute; left:50%; transform: translateX(-50%); top:-10px;}
+.tournament .round .group.sm_bottom::after {display:block; content: ''; width:521px; height:1px; background-color: #a0a2a2; position:absolute; left:50%; transform: translateX(-50%); bottom:-10px;}
+
+.tournament .teams {min-height: 135px; margin:0 auto; width:240px; background-color:#fff; padding:16px 20px; border-radius: 8px; box-shadow: 1px 2px 4px rgba(0, 0, 0, .15); box-sizing:border-box; position:relative;}
+.tournament .teams::after {display:block; content: ''; width:1px; height:10px; background-color:#A0A2A2; position:absolute; left:50%; top:100%; transform: translateX(-50%);}
+.tournament .teams.bar_none::after {display:none;}
+.tournament .teams.top_bar::before {display:block; content: ''; width:1px; height:10px; background-color:#A0A2A2; position:absolute; left:50%; bottom:100%; transform: translateX(-50%);}
+.tournament .teams .title {margin-bottom:8px; font-size:14px; font-weight:700; color:#00A580; text-align:center; line-height: 1em;}
+.tournament .teams .vs_wrap {display:flex;}
+.tournament .teams .vs_wrap .emb_wrap {width:68px;}
+.tournament .teams .vs_wrap .emb_wrap .img {margin:0 auto; width:44px; height:44px; border-radius: 50%; overflow:hidden;}
+.tournament .teams .vs_wrap .emb_wrap p {line-height:1.1em; font-size:12px; margin-top:8px; text-align:center;}
+.tournament .teams .vs_wrap .vs {margin:30px 16px 0; width:32px; height:26px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700; color:#00A580;}
+.tournament .teams .vs_wrap .vs img {width:100%; height:100%; display:block;}
+
+/* 상세내용 팝업 */
+.alert_pop.dt_sch {max-width: 600px;}
+.alert_pop.dt_sch h3 ~ h3 {margin-top:56px;}
+.sch_tb_01 {margin-top:32px;}
+.sch_tb_01 tr th {font-weight:700; color:#fff; background-color: #00A580;}
+.sch_tb_01 tr td {padding:11px 20px; border:1px solid #A0A2A2;}
+.sch_tb_01 tr:nth-child(1) td {border-bottom: none;}
+.sch_tb_01 tr:nth-child(n+2) th {border-top:1px solid #fff; border-bottom: 1px solid #00A580;}
+
+.sch_tb_02 {border:1px solid #a0a2a2; margin-top:32px;}
+.sch_tb_02 thead th {padding:11px 5px; background-color: #00A580; color:#fff; font-weight:700;}
+.sch_tb_02 thead th:nth-child(2) {border-left: 1px solid #fff; border-right: 1px solid #fff;}
+.sch_tb_02 tbody td {padding:11px 5px; text-align:center; border-top:1px solid #a0a2a2}
+.sch_tb_02 tbody td.catg {border-color: #fff; color:#fff; background-color: #00A580;}
+
+/* -------------- 공지사항 ---------------  */
+.compt_noti {margin-top:40px;}
+.noti_srch .search_wrap {margin-left:auto;}
+.noti_tb {margin-top:40px;}
+.noti_tb tr th {background-color:#F5F5F5; font-weight:700; padding:20px 8px;}
+.noti_tb tr th:nth-child(3),
+.noti_tb tr th:nth-child(2) {width:112px;}
+.noti_tb tr td {padding:28px 8px; border-bottom: 1px solid #a0a2a2;}
+.noti_tb tr td.tit {font-size:20px; font-weight:700;}
+.noti_tb tr td.tit a {width:100%; display:block;}
+.noti_tb tr td.auth {width:112px; color:#00A580; text-align:center;}
+.noti_tb tr td.date {width:112px; color:#A0A2A2; text-align:center;}
+
+@media only screen and (max-width:1500px) {
+	.stage_box {padding:40px 38px; padding: 20px;}
+}
+@media only screen and (max-width:1024px) {
+	.schedule_box li {flex-direction: column;}
+	.schedule_box .versus {margin-top: 24px;}
+	.schedule_box .btn_wrap {margin-top: 24px;}
+}
+@media only screen and (max-width:768px) {
+	/* 팀리스트 */
+	.compt_team {margin-top:24px; padding:0;}
+	.compt_team ul {padding:0 10px;}
+	.compt_team ul li {flex-direction: column; align-items: flex-start;}
+	.compt_team ul li .team_name p {font-size:16px;}
+	.compt_team ul li .btn_wrap {margin-top:8px;}
+
+	/* -------------- 리그 순위 ---------------  */
+	.group_list .acc_g .acc_cotn {padding:40px 15px;}
+	.group_list .acc_g .ctrl {font-size:14px;}
+
+	/* -------------- 경기일정 ---------------  */
+	.stage_box {width: 100%; margin-top: 24px;}
+	.stage_box .tit {font-size: 18px;}
+	.stage_slide {margin-top: 24px;}
+	.stage_slide .g_name {font-size: 18px;}
+	.stage_slide .stage_table .tb_head .th {font-size: 14px; padding: 12px 0;}
+	.stage_slide .stage_table .tb_body .td {font-size: 14px;}
+	.stage_slide .stage_table .td.td_rank .rank_label {font-size: 14px;}
+	.stage_slide .stage_table {width: 100%; min-width: 384px; box-shadow: none;}
+	.stage_slide .t_scroll { overflow-x: auto;}
+
+	.schedule_wrap {margin-top: 24px; width: 100%;}
+	.schedule_wrap .tit {padding-bottom: 16px; font-size: 18px; border-width: 1px;}
+	.schedule_box {padding: 20px 15px;}
+	.schedule_box .list_tab {margin: 20px 0;}
+	.schedule_box li {padding: 20px 0;}
+	.schedule_box .btn_wrap,
+	.schedule_box li .btn_wrap .btn {width: 100%;}
+
+	/* 상세내용 팝업 */
+	.alert_pop.dt_sch h3 {font-size:20px;}
+	.alert_pop.dt_sch h3 ~ h3 {margin-top:30px;}
+	.sch_tb_02 *,
+	.sch_tb_01 * {font-size:14px;}
+	.sch_tb_01 tr td {padding:5px 20px;}
+	.sch_tb_02 thead th ,
+	.sch_tb_02 tbody td {padding:5px;}
+
+	/* -------------- 공지사항 ---------------  */
+	.compt_noti {margin-top:20px;}
+	.noti_srch .search_wrap {margin-left:0;}
+	.noti_tb {margin-top:20px;}
+	.noti_tb tr th {padding:20px 4px; font-size:14px;}
+	.noti_tb tr th:nth-child(2) {width:50px;}
+	.noti_tb tr th:nth-child(3) {width:80px;}
+	.noti_tb tr td {padding:20px 4px; font-size:14px;}
+	.noti_tb tr td.tit {font-size:14px;}
+	.noti_tb tr td.auth {width:50px;}
+	.noti_tb tr td.date {width:80px;}
+	.noti_tb ~ .paging {margin-top:40px;}
+}
+
+/* ============================== [ 선수 ] ========================================================================================== */
+
+/* -------------- 선수정보 ---------------  */
+.player_group {padding:0 20px;}
+.player_group ~ .player_group {margin-top:40px;}
+.player_group .pl_head {display:flex; align-items:center; height:48px; padding:0 62px; box-sizing:border-box; margin-bottom:20px;}
+.player_group .pl_head.h_my {background-color:#2E655B;}
+.player_group .pl_head.h_all {background-color:#6E6E6E;}
+.player_group .pl_head.h_tema {background-color:#00A580;}
+.player_group .pl_head p {font-size:18px; font-weight:700; color:#fff;}
+.player_group ul {padding:0 20px;}
+.player_group ul li {position:relative; border-bottom: 1px solid #A0A2A2; display:flex; align-items:center; padding-right:34px; background: url(../images/content/arr_player.svg) no-repeat right center;}
+.player_group ul li .pl_cotn {display:flex; align-items:center; padding:10px 0; }
+.player_group ul li .pl_cotn .img {width:60px; height:60px; border-radius: 50%;}
+.player_group ul li .pl_cotn .info {margin-left:24px; flex:1; padding-right:20px;}
+.player_group ul li .pl_cotn .info .name {color:#6E6E6E; font-size:14px; font-weight:700;}
+.player_group ul li .pl_cotn .info .team {font-size:14px; margin-top:10px;}
+.player_group ul li .pl_cotn .info .team_name {font-size:16px; color:#6E6E6E; font-weight:700;}
+.player_group ul li .btn_wrap {margin-left:auto; z-index:1;}
+.player_group .team_list li:not(:first-child) {padding:20px;}
+.player_group .team_list li:first-child {padding:0 20px 20px;}
+.player_group .team_list ul li .pl_cotn {background-position: right 20px center;}
+
+/* -------------- 선수 상세 정보 ---------------  */
+.player_detail {padding:0 20px; margin-top:80px;}
+.profile {display:flex;}
+.profile .pf_info {display:flex; flex-direction: column; align-items:center; position:relative;}
+.profile .pf_info .img {width:180px; height:226px; box-sizing:border-box; padding:12px; background-color:#F5F5F5;}
+.profile .pf_info .img img {border-radius: 8px;}
+.profile .pf_info .txt_wrap {margin-top:16px;}
+.profile .pf_info .txt_wrap .name {font-size:26px; position:absolute; left:50%; top:-40px; transform: translateX(-50%);}
+.profile .pf_info .txt_wrap dl {display:flex;}
+.profile .pf_info .txt_wrap dl ~ dl {margin-top:5px;}
+.profile .pf_info .txt_wrap dl dt {color:#6E6E6E; font-weight:700; width:56px;}
+.profile .pf_info .txt_wrap dl dd {color:#6E6E6E;}
+.profile .pf_tb {margin-top:13px; margin-left:20px;}
+.profile .pf_tb table {border-top: 1px solid #2f2f2f; border-bottom:1px solid #2f2f2f;}
+.profile .pf_tb th {background-color:#F5F5F5; color:#6E6E6E; font-weight:700; border-bottom: 1px solid #A0A2A2; height:40px;}
+.profile .pf_tb td {height:156px;}
+.profile .pf_tb td p {text-align:center; font-size:20px; color:#6e6e6e; font-weight:700;}
+.profile .pf_tb .mark_img {width:60px; height:60px; margin:0 auto;}
+.profile .pf_tb .btn_wrap {margin-top:16px; justify-content:flex-end;}
+
+.reward {margin-top:40px;}
+.reward .tit_area {display:flex; align-items:center; padding-left:16px; margin-bottom:12px;}
+.reward .tit_area .re_tit {font-size:18px; font-weight:700; color:#00a580;}
+.reward .tit_area .desc {font-size:14px; color:#2E655B; position:relative; margin-left:10px; padding-left:6px;}
+.reward .tit_area .desc::after {display:block; content: '*'; position:absolute; left:0; top:3px;}
+.reward .reward_li {background-color:#F5F5F5; padding:20px; margin-top:12px;}
+.reward .reward_li ul {display:flex; flex-wrap: wrap; gap:16px}
+.reward .reward_li li {display:flex; flex-direction: column; width:114px; border-radius: 8px; box-shadow: 1px 2px 4px rgba(0, 0, 0, .15); overflow:hidden;}
+.reward .reward_li li .reward_img {background-color:#6E6E6E; padding:20px; height:110px; box-sizing:border-box; display:flex; align-items:center; justify-content:center;}
+.reward .reward_li li .reward_img img {max-width: 100%; width:auto; height:auto; max-height: 100%;}
+.reward .reward_li li p {background-color:#fff; font-size:14px; font-weight:700; color:#2E655B; padding:8px; text-align:center;}
+.reward .select_box {max-width: 280px;}
+
+/* -------------- 선수 순위 ---------------  */
+.player_rank {padding:0 20px;}
+.sort_area {display:flex; align-items:center;}
+.sort_area .sel_wrap {display:flex; align-items:center; flex:1; margin-right:20px;}
+.sort_area .sel_wrap .select_box {background-image: url(../images/content/arr_select_gr.svg); max-width: 360px; margin-right:10px; border-color: #00A580; color: #00A580;}
+.player_rank .rank_board {margin-top:16px; padding:40px 80px; background-color:#F5F5F5;}
+.sort_area ~ .group_list {margin-top:32px;}
+/* -------------- 팀정보 ---------------  */
+.team_intro {padding:0 20px 0 40px; margin-top: 56px;}
+.team_intro .intro_wrap {display: flex; align-items: center;}
+.team_intro .img {width: 200px; height: 200px; border-radius: 50%;}
+.team_intro .txt_wrap {padding: 40px; margin-left: 40px; flex:1; background-color: #F5F5F5; box-sizing: border-box; position:relative;}
+.team_intro .txt_wrap .name {color: #2E655B; font-size: 26px;}
+.team_intro .txt_wrap .txt {margin-top: 32px; font-size: 18px; color: #6E6E6E;}
+.team_intro .txt_wrap {display:flex; align-items:center; justify-content:space-between;}
+.team_intro .txt_wrap dl {margin-top:22px; display:flex;}
+.team_intro .txt_wrap dl ~ dl {margin-top:10px;}
+.team_intro .txt_wrap dl dt {width:90px; font-size:18px; font-weight:700; color:#00A580;}
+.team_intro .txt_wrap dl dd {color:#6E6E6E; font-size:18px; flex:1;}
+.team_intro .txt_wrap .btn_wrap {flex-direction: column; width:120px; margin-left:10px;}
+.team_intro .btn_wrap {justify-content: flex-end; margin-top: 20px;}
+.team_intro.my_team_intro .txt_wrap {align-items: flex-start;}
+.team_intro .txt_wrap .btn_wrap.small_btn {margin-top: 0;}
+.team_intro .txt_wrap .btn_wrap.small_btn .btn ~ .btn {margin-left:0;}
+.team_intro .btn_wrap .btn {margin:6px 0 0 0;}
+.complet_pop .pop_tit {padding-top: 30px;}
+.complet_pop .btn_wrap {margin-top: 56px;}
+
+/* -------------- 팀일정 ---------------  */
+.sche_sort {display: flex; align-items: center;}
+.sche_sort .select_box {width: auto; min-width: 97px;}
+.sche_sort .noti_txt {margin-left: 10px;;}
+.date_swiper {margin-top: 36px; margin-bottom:20px; padding: 0 50px; position:relative;}
+.slide_label {display: flex; justify-content: flex-end; margin-bottom: 10px;}
+.slide_label span {font-size: 12px; line-height: 1em; color: #6E6E6E; position: relative; padding-left: 10px;}
+.slide_label span ~ span {margin-left: 10px;}
+.slide_label span::after {display: block; content: ''; width: 8px; height: 8px; border-radius: 50%; position: absolute; left: 0; top: 2px;}
+.slide_label span.schd_d::after {background-color: #57EE9B;}
+.slide_label span.compt_d::after {background-color: #2E655B;}
+
+.date_swiper .label_pt {position:absolute; left:6px; top:6px; display:flex;}
+.date_swiper .label_pt i {width:8px; height:8px; border-radius: 50%;}
+.date_swiper .label_pt i ~ i {margin-left:4px;}
+.date_swiper .label_pt i.s_d {display:none; background-color:#57EE9B;}
+.date_swiper .label_pt i.c_d {display:none; background-color:#2E655B;}
+.date_swiper .schd_pt .label_pt i.s_d {display:block;}
+.date_swiper .compt_d .label_pt i.c_d {display:block;}
+
+.date_swiper .arr_tab .arr {position:absolute; bottom:20px; display: block; width: 14px; height: 28px; background-position: 0 0; background-repeat: no-repeat; background-size: 100% auto; z-index: 1;}
+.date_swiper .arr_tab .arr.tab_prev {left:0; background-image: url(../images/content/arr_evt_l.svg);}
+.date_swiper .arr_tab .arr.tab_next {right:0; background-image: url(../images/content/arr_evt_r.svg);}
+
+.sche_list {border-top:1px solid #2F2F2F; border-bottom:1px solid #2F2F2F;}
+.sche_list li {padding: 26px 10px; display: flex; align-items: center;}
+.sche_list li ~ li {border-top:1px solid #A0A2A2;}
+.sche_list .preview_area {width:100%; max-width: 330px; min-height: 100px;}
+.sche_list .preview_area .img {width: 100%; height: 100%; border-radius: 10px; overflow: hidden;}
+.sche_list .preview_area .versus {padding:20px 10px;}
+.sche_list .preview_area .versus .state {margin-right: 10px;}
+.sche_list .preview_area .versus .teams .vs {margin: 0 10px;}
+.sche_list .txt_area {flex:1; margin-left: 20px;}
+.sche_list .txt_area .date {font-weight: 700; display:inline-block; padding-right:16px; position:relative;}
+.sche_list .txt_area .date::after {content: ''; width:8px; height:8px; border-radius: 50%; position:absolute; right:0; top:50%; transform: translateY(-50%); display:none;}
+.sche_list .txt_area .loc {margin-top: 10px; font-size: 14px;}
+.sche_list li.schd_pt .txt_area .date::after {background-color:#57EE9B; display:block;}
+.sche_list li.compt_d .txt_area .date::after {background-color:#2E655B; display:block;}
+
+.my_sche {margin-top:50px;}
+.my_sche .list_top {display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;}
+.my_sche .list_top .more {font-size:14px; color:#000;}
+
+/* 팀 설정 팝업 */
+.setting_team_pop {max-width: 780px;}
+.setting_form {display:flex; margin-top:40px;}
+.setting_form .thumb_edit {width:152px;}
+.setting_form .thumb_edit .img {width:100%; height:152px; border:8px solid #F5F5F5; box-sizing:border-box;}
+.setting_form .thumb_edit .btn_wrap {margin-top:12px;}
+.setting_form .thumb_edit .btn_wrap .btn {width:152px;}
+.setting_form .inpt_wrap {margin-left:20px; flex:1;}
+.setting_form .inpt_wrap .group {display:flex;}
+.setting_form .inpt_wrap .group ~ .group {margin-top:8px;}
+.setting_form .inpt_wrap .group .tit {font-weight:500; margin-top:10px; width:80px;}
+.setting_form .inpt_wrap .group input[type="text"] {flex:1; border:1px solid #A0A2A2; border-radius: 2px; width:100%; height:42px; box-sizing:border-box; padding:0 16px;}
+.setting_form .inpt_wrap .group textarea {flex:1; border:1px solid #A0A2A2; border-radius: 2px; width:100%; height:210px; box-sizing:border-box; resize: none; outline: none; padding:16px;}
+
+
+@media only screen and (max-width:1024px) {
+	.player_rank .rank_board {margin-top:40px; padding:40px 15px;}
+	.sort_area {display:block;}
+	.sort_area .sel_wrap {margin-right:0;}
+	.sort_area .search_wrap {margin-top:20px;}
+	.sort_area ~ .group_list {margin-top:40px;}
+
+	/* -------------- 팀정보 ---------------  */
+	.team_intro.my_team_intro .txt_wrap {margin-bottom:60px;}
+	.team_intro .txt_wrap .btn_wrap {margin-left:0; position:absolute; bottom:-60px; right:0; flex-direction: row; width:100%;}
+	.team_intro .btn_wrap.small_btn .btn ~ .btn {margin-left:6px;}
+	.team_intro .btn_wrap .btn {margin:0 0 0 6px;}
+}
+@media only screen and (max-width:768px) {
+	.setting_form {flex-direction: column; align-items:center;}
+	.setting_form .inpt_wrap {margin-left:0; margin-top:20px; width:100%;}
+	.setting_form .inpt_wrap .group.inpt_g {display:block;}
+	.setting_form .inpt_wrap .group.inpt_g .tit {margin:0 0 10px 0;}
+	/* -------------- 선수정보 ---------------  */
+	.player_group {padding:0;}
+	.player_group ul {padding:0;}
+	.player_group ul li {padding-right:26px;}
+	.player_group .pl_head {height:48px; padding:0 30px;}
+	.player_group .pl_head p {font-size:16px;}
+
+	.player_group .team_list li:not(:first-child) {padding:0;}
+	.player_group .team_list li:first-child {padding:0;}
+	.player_group .team_list ul li .pl_cotn {background-position: right center;}
+
+	.player_group ul li .btn_wrap {flex-direction: column; padding:10px 0;}
+	.player_group .btn_wrap.small_btn .btn {width:88px;}
+	.player_group .btn_wrap.small_btn .btn ~ .btn {margin:8px 0 0 0;}
+
+	/* -------------- 선수 상세 정보 ---------------  */
+	.player_detail {padding:0; margin-top:0;}
+	.profile {flex-direction: column;}
+	.profile .pf_info {flex-direction: row; justify-content:center;}
+	.profile .pf_info .img {width:160px; height:200px;}
+	.profile .pf_info .txt_wrap {margin-top:0; margin-left:24px;}
+	.profile .pf_info .txt_wrap .name {font-size:20px; font-weight:700; color:#6e6e6e; position:relative;transform: none; left:inherit; top:inherit;}
+	.profile .pf_info .txt_wrap dl {margin-top:10px;}
+	.profile .pf_info .txt_wrap dl ~ dl {margin-top:10px;}
+	.profile .pf_tb {margin-top:20px; margin-left:0px;}
+
+	.profile .pf_tb th {width:50%;}
+	.profile .pf_tb td {height:136px; width:50%;}
+	.profile .pf_tb td p {font-size:18px;}
+	.profile .pf_tb .btn_wrap {margin-top:20px; justify-content:center;}
+
+	.reward {margin-top:40px;}
+	.reward .tit_area {padding-left:0; margin-bottom:16px; display:block;}
+	.reward .tit_area .re_tit {font-size:16px;}
+	.reward .tit_area .desc {margin-left:0; margin-top:5px; padding-left:6px;}
+	.reward .reward_li {margin-top:16px;}
+
+	/* -------------- 선수 순위 ---------------  */
+	.player_rank {padding:0;}
+	.sort_area .sel_wrap {display:block;}
+	.sort_area .sel_wrap .select_box {height:32px; max-width: 100%;}
+	.sort_area .sel_wrap .noti_txt {margin-top:16px;}
+
+	/* -------------- 팀정보 ---------------  */
+	.team_line_tab .line_tab li a {font-size: 16px;}
+	.team_intro {padding:0; margin-top: 0;}
+	.team_intro .intro_wrap {flex-direction: column;}
+	.team_intro .txt_wrap {margin-left: 0; margin-top: 24px; width:100%;}
+	.team_intro .txt_wrap .name {font-size: 18px;}
+	.team_intro .txt_wrap .txt {font-size: 16px;}
+	.team_intro .txt_wrap .btn_switch .form_chk {width:105px;}
+	.team_intro .txt_wrap .btn_switch .form_chk input:checked ~ .icon {right:65px;}
+	.team_intro .txt_wrap .btn_switch .form_chk .switch.off {right:17px;}
+
+	/* -------------- 팀일정 ---------------  */
+	.sche_sort {display:block;}
+	.sche_sort .select_box {height:32px;}
+	.sche_sort .noti_txt {margin:16px 0 0 0;}
+
+	.date_swiper {padding:0 15px;}
+	.date_swiper .arr_tab .arr {width:7px; height:14px;}
+
+	.date_swiper .label_pt {left:4px; top:4px;}
+	.date_swiper .label_pt i {width:6px; height:6px;}
+
+	.sche_list li {padding:26px 10px; flex-direction: column;}
+	.sche_list .txt_area .loc {text-align:center;}
+	.sche_list .txt_area {margin:20px 0 0 0;}
+}
+
+/* ============================== [ 매치 ] ========================================================================================== */
+.content_tit_area.match_tit .tit_l {display:flex;}
+.content_tit_area.match_tit .tit_l div.sort_select ~ .sort_select {margin-left:4px;}
+
+/* -------------- 매치 목록 ---------------  */
+.match_list {padding:0 20px;}
+.match_list li {padding:10px 0 50px;}
+.match_list li ~ li {margin-top:24px;}
+.match_list .tit_area {display:flex; align-items: flex-end; padding-bottom:15px; margin-bottom:15px; border-bottom: 2px solid #A0A2A2;}
+.match_list .tit_area .title span {color:#00A580;}
+.match_list .tit_area .title p {margin-top:10px; font-size:26px; font-weight:700;}
+.match_list .tit_area .date {margin-left:auto; color:#6e6e6e;}
+.match_list .cotn {display:flex; align-items:center; justify-content:space-between;}
+.match_list .cotn .info dl {display:flex;}
+.match_list .cotn .info dl ~ dl {margin-top:15px;}
+.match_list .cotn .info dt {font-weight:700; width:80px;}
+.match_list .cotn .info dd {color:#6e6e6e;}
+
+/* -------------- 등록하기 ---------------  */
+.apply_form {padding:0 50px;}
+.apply_form .group {display:flex;}
+.apply_form .group ~ .group {margin-top:20px;}
+.apply_form .tit {width:120px; padding-top:14px; font-size:18px; font-weight:700;}
+.apply_form .tit.date_tit {padding-top:24px;}
+.apply_form .content_wrap {width:calc(100% - 120px);}
+.apply_form .content_wrap input[type="text"] {width:100%; border:1px solid #A0A2A2; border-radius: 2px; height:48px; box-sizing:border-box; padding:0 16px;}
+.apply_form .content_wrap textarea {width:100%; border:1px solid #A0A2A2; border-radius: 2px; height:240px; box-sizing:border-box; padding:16px; resize: none;}
+.apply_form .content_wrap .select_box {max-width:320px; height:48px; padding:0 50px 0 20px; background-size: 14px auto; background-position: right 20px center;}
+.apply_form .cont_select {display:flex; flex-wrap: wrap;}
+.apply_form .date_swiper {margin:0;}
+.apply_form .date_select {width:calc(50% - 25px); display:flex; gap:20px}
+.apply_form .date_select ~ .date_select {padding-left:50px; position:relative;}
+.apply_form .date_select ~ .date_select::after {display:block; content: '~'; position:absolute; left:20px; top:50%; transform: translateY(-50%); font-size:18px; font-weight:700;}
+.apply_form .rdo_wrap {padding-top: 14px;}
+.apply_form .rdo_wrap .form_rdo ~ .form_rdo {margin-left:20px;}
+.apply_form .team_selt {display:flex; align-items:center;}
+.apply_form .team_selt select {margin-right:20px;}
+.apply_form .player_cont li {margin-top:20px; max-width: 280px;}
+.apply_form > .btn_wrap {margin-top:50px; justify-content:center;}
+
+/* -------------- 매치 상세 ---------------  */
+.match_detail {padding:0 20px;}
+.match_detail .write_info {display:flex; justify-content:flex-end; padding:0 10px;}
+.match_detail .write_info dl {display:flex;}
+.match_detail .write_info dl ~ dl {margin-left:24px;}
+.match_detail .write_info dl dt {font-weight:500;}
+.match_detail .write_info dl dd {color:#6E6E6E; margin-left:12px;}
+.match_detail .write_info dl dd.auth {color: #00A580;}
+.match_detail .tb_wrap {margin-top:16px;}
+.match_detail .tb_wrap .group {display:flex; flex-wrap:wrap}
+.match_detail .tb_wrap .group .item {width:50%; display:flex;}
+.match_detail .tb_wrap .i_th {width:23%; padding:14px 10px; background-color: #00A580; color:#fff; font-weight:700; border-bottom: 1px solid #fff;}
+.match_detail .tb_wrap .i_td {flex:1; padding:14px 10px; border-bottom: 1px solid #A0A2A2; box-sizing:border-box;}
+.match_detail .tb_wrap .i_td.team_text {min-height: 108px;}
+.match_detail .tb_wrap .group:first-child .i_td {background-color:#F5F5F5;}
+.match_detail .tb_wrap .pl_li {display:flex; flex-wrap: wrap; gap:10px}
+.match_detail .tb_wrap .pl_li li {display:flex; flex-direction: column; justify-content:center; align-items:center;}
+.match_detail .tb_wrap .pl_li .img {width:60px; height:60px; border-radius: 50%;}
+.match_detail .tb_wrap .pl_li p {margin-top:4px;}
+.match_detail .tb_wrap .team_logo {padding:6px 10px;}
+.match_detail .tb_wrap .logo_wrap {display:flex; align-items:center;}
+.match_detail .tb_wrap .logo_wrap p {flex:1;}
+.match_detail .tb_wrap .logo_wrap .img {width:32px; height:32px; border-radius: 50%; margin-right:10px;}
+
+/* -------------- 대기자 ---------------  */
+.waiting_list {padding:0 20px;}
+.waiting_list li {padding:20px 0; border-bottom: 1px solid #A0A2A2; display:flex;}
+.waiting_list .wait_l {display:flex; align-items:center;}
+.waiting_list .wait_l .img {width:68px; height:68px; border-radius: 50%;}
+.waiting_list .wait_l .txt_wrap {margin-left:20px;}
+.waiting_list .wait_l .name {font-size:12px; color:#A0A2A2;}
+.waiting_list .wait_l .name strong {font-size:16px; font-weight:700; color:#2F2F2F; margin-right:4px;}
+.waiting_list .wait_l .tel {font-size:14px; margin-top:10px;}
+.waiting_list .wait_l .team_name {font-size:14px; margin-top:10px; color:#00A580}
+.waiting_list .wait_r {margin-left:auto; display:flex; align-items:center;}
+.waiting_list .wait_r .btn_group {display:flex;}
+.waiting_list .wait_r .btn_group .btn_wrap {margin-left:10px;}
+.waiting_list .wait_r .btn_group .btn ~ .btn {margin-left:0;}
+.waiting_list .wait_r .state {padding-top:60px; background-position: top center; background-repeat: no-repeat; background-size: 48px; background-image: url(../images/content/state_wait.svg);}
+.waiting_list .wait_r .state.reject {background-image: url(../images/content/state_rej.svg);}
+.waiting_list .wait_r .state.accept {background-image: url(../images/content/state_acc.svg);}
+.waiting_list .list_none {margin-bottom:20px; padding-bottom:20px; border-bottom: 1px solid #A0A2A2;}
+.waiting_list .list_none .box_inner {background-color:#A0A2A2; display:flex; align-items:center; justify-content:center; height:93px;}
+.waiting_list .list_none p {color:#fff; font-size:18px;}
+.waiting_list .space {background-color:#F5F5F5; display:flex; align-items:center; justify-content:center; height:65px; margin-top: 20px;}
+.waiting_list .space p {font-size:20px;font-weight:700; display:flex; align-items:center;}
+.waiting_list .space strong {color:#2E655B; font-size:30px; margin-right:4px;}
+.waiting_list > .btn_wrap {margin-top:40px; justify-content:center;}
+
+@media only screen and (max-width:1024px){
+	/* -------------- 등록하기 ---------------  */
+	.apply_form {padding:0 40px;}
+	.match_detail .write_info {padding:0;}
+}
+@media only screen and (max-width:768px) {
+	.content_tit_area.match_tit {display:block; padding:0 0 16px 0;}
+	.content_tit_area.match_tit .tit_r {margin-top:16px; width:100%;}
+	.content_tit_area.match_tit .tit_r .btn {width:100%;}
+	.match_list {padding:0;}
+	.match_list li {padding:10px 0 40px;}
+	.match_list li ~ li {margin-top:20px;}
+	.match_list .tit_area {flex-direction: column; align-items: flex-start;}
+	.match_list .tit_area .title span {font-size:14px;}
+	.match_list .tit_area .title p {font-size:20px;}
+	.match_list .tit_area .date {margin-top:10px;}
+	.match_list .cotn {flex-direction: column; align-items: flex-start;}
+	.match_list .cotn .info dt {font-size:14px;}
+	.match_list .cotn .info dd {font-size:14px;}
+	.match_list .cotn .btn_wrap {margin-top:20px; width:100%;}
+	.match_list .cotn .btn_wrap .btn {width:100%;}
+
+	/* -------------- 등록하기 ---------------  */
+	.apply_form {padding:0;}
+	.apply_form .group {flex-direction: column;}
+	.apply_form .tit {width:120px; padding:0; font-size:16px; margin-bottom:16px;}
+	.apply_form .tit.date_tit {padding-top:0;}
+	.apply_form .content_wrap {width:100%;}
+	.apply_form .content_wrap .select_box {max-width: 100%; padding:0 30px 0 14px; background-size: 10px auto; background-position: right 14px center;}
+	.apply_form .cont_select .date_select {width:100%;}
+	.apply_form .date_swiper {margin:0;}
+	.apply_form .date_select ~ .date_select {padding:28px 0 0 0;}
+	.apply_form .date_select ~ .date_select::after {left:50%; top:5px; transform: translate(-50%, 0);}
+	.apply_form .rdo_wrap {padding-top: 0;}
+	.apply_form .rdo_wrap .form_rdo ~ .form_rdo {margin-left:16px;}
+	.apply_form .team_selt {flex-direction: column; align-items: flex-start;}
+	.apply_form .team_selt select {margin:0 0 16px;}
+	.apply_form .player_cont li {max-width: 100%;}
+	.apply_form > .btn_wrap {margin-top:40px;}
+	.apply_form > .btn_wrap .btn {width:100%;}
+
+	/* -------------- 매치 상세 ---------------  */
+	.match_detail {padding:0;}
+	.match_detail .write_info dl ~ dl {margin-left:16px;}
+	.match_detail .write_info dl dt {font-size:14px;}
+	.match_detail .write_info dl dd {font-size:14px;}
+	.match_detail .tb_wrap .group {display:block;}
+	.match_detail .tb_wrap .group .item {width:100%;}
+	.match_detail .tb_wrap .i_th {padding:16px 10px; width:34%; font-size:14px;}
+	.match_detail .tb_wrap .i_td {padding:16px 10px; font-size:14px;}
+	.match_detail .tb_wrap .pl_li {flex-direction: column;}
+	.match_detail .tb_wrap .pl_li li {flex-direction: row; justify-content: flex-start;}
+	.match_detail .tb_wrap .pl_li .img {width:20px; height:20px;}
+	.match_detail .tb_wrap .pl_li p {margin:0 0 0 6px;}
+	.match_detail .tb_wrap .team_logo {padding:14px 10px;}
+	.match_detail .tb_wrap .logo_wrap .img {width:20px; height:20px;}
+	.match_detail .tb_wrap .logo_wrap p {font-size:14px;}
+
+	/* -------------- 대기자 ---------------  */
+	.waiting_list {padding:0;}
+	.waiting_list li {display:block;}
+	.waiting_list li:first-child {padding-top:0;}
+	.waiting_list .wait_l .team_name {margin-top:5px;}
+	.waiting_list .wait_r {margin-top:24px; flex-direction: column;}
+	.waiting_list .wait_r .btn_group {flex-direction: column; width:100%;}
+	.waiting_list .wait_r .btn_group .btn_wrap {width:100%; margin:10px 0 0 0;}
+	.waiting_list .wait_r .btn_group .btn ~ .btn {margin:0 0 0 10px;}
+	.waiting_list .wait_r .state {line-height:32px; padding:0 0 0 32px; background-position: left center; background-size: 24px;}
+
+	.waiting_list .space {height:55px;}
+	.waiting_list .space p {font-size:16px;}
+	.waiting_list .space strong {font-size:20px;}
+}
+
+/* ============================== [ 소셜매치 ] ========================================================================================== */
+
+/* -------------- 매치목록 ---------------  */
+.social_li {padding:0 20px;}
+.social_tit {display:flex; align-items:center; border-bottom: 1px solid #A0A2A2; margin-bottom:20px;}
+.social_tit p {padding:0 0 8px 32px; font-size:18px; font-weight:700; color:#6e6e6e; background-position: left top; background-repeat: no-repeat; background-size: 28px; line-height:28px;}
+.social_tit p.date {background-image: url(../images/content/ico_res_date.svg);}
+.social_tit p.vs {background-image: url(../images/content/ico_res_vs.svg);}
+.social_tit .count {margin-left:auto; font-size:16px; font-weight:500; color:#6e6e6e;}
+.social_date {margin-bottom:40px;}
+.social_date .date_swiper {margin:0; padding:0 40px;}
+.select_list {display:flex; flex-wrap:wrap; gap:8px;}
+.select_list .select_box {width:auto; min-width: 97px;}
+.social_match ul {margin-top:20px;}
+.social_match ul li {padding:32px 40px; display:flex; align-items:center; border-bottom: 1px solid #A0A2A2;}
+.social_match ul li .info_wrap {display:flex; align-items:center;}
+.social_match ul li .info_wrap .time {font-weight:700; color:#2E655B;}
+.social_match ul li .info_wrap .txt_wrap {margin-left:48px;}
+.social_match ul li .info_wrap .txt_wrap .title {font-size:18px;}
+.social_match ul li .info_wrap .txt_wrap .condition {font-size:14px; color:#6e6e6e; margin-top:6px;}
+.social_match ul li > .btn_wrap {margin-left:auto;}
+.apply_acc .pop_tit {padding-top:40px;}
+.apply_acc .btn_wrap {margin-top:56px;}
+
+/* -------------- 구장정보 ---------------  */
+.std_thumb {margin-top:-20px;}
+.std_thumb .img {height:250px; width:100%;}
+.std_info {margin-top:40px; padding:0 20px;}
+.std_info .tit_area {padding-bottom: 20px; margin-bottom:20px; border-bottom: 1px solid #a0a2a2;}
+.std_info .tit_area .date {font-weight:700;}
+.std_info .tit_area .title {font-size:26px; color:#00A580; font-weight:700; margin-top:10px;}
+.std_info .cond_wrap {display:flex; align-items:center; margin-top:32px; justify-content:space-between;}
+.std_info .cond_wrap .addr {display:flex; flex-wrap: wrap;}
+.std_info .cond_wrap .addr li {display:flex; align-items:center;}
+.std_info .cond_wrap .addr li ~ li {margin-left:10px; padding-left:10px; position:relative;}
+.std_info .cond_wrap .addr li ~ li::after {display:block; content: ''; width:1px; height:17px; position:absolute; left:0; top:2px; background-color:#2f2f2f;}
+.std_info .cond_wrap .addr a {margin-left:10px; padding-left:10px; position:relative; line-height:17px;}
+.std_info .cond_wrap .addr a::after {display:block; content: ''; width:1px; height:17px; position:absolute; left:0; top:2px; background-color:#2f2f2f;}
+
+.std_info .cond_wrap .addr button,
+.std_info .cond_wrap .addr a {color:#A0A2A2;}
+.std_info .cond_wrap .cond_li {margin-left:20px; justify-content: flex-end; flex:1;}
+.cond_li {display:flex; flex-wrap: wrap;}
+.cond_li li {position:relative;}
+.cond_li li:not(:last-child) {padding-right:27px;}
+.cond_li li:not(:last-child)::after {content: '/'; display:block; width:7px; height:12px; position:absolute; right:10px; top:0;}
+.std_info .exp_wrap {padding-bottom: 20px; margin-bottom:20px; border-bottom: 1px solid #a0a2a2; display:flex; align-items:center;}
+.std_info .exp_wrap .fee .tit {font-weight:700;}
+.std_info .exp_wrap .fee .charge strong {font-size:20px; font-weight:700;}
+.std_info .exp_wrap .fee .charge span {color:#6e6e6e; margin-left:2px;}
+.std_info .exp_wrap .go_apply {margin-left:auto; display:flex; align-items:center;}
+.std_info .exp_wrap .go_apply .txt strong {color:#57EE9B; display:block;}
+.std_info .exp_wrap .go_apply .btn_wrap {margin-left:20px;}
+.std_info .dt_wrap {padding-bottom: 20px; margin-bottom:20px; border-bottom: 1px solid #a0a2a2;}
+.std_info .dt_wrap h4 {font-weight:700; margin-bottom:16px;}
+.std_info .dt_wrap .gy_box {background-color: #F5F5F5; border-radius:8px; padding:20px;}
+.std_info .dt_wrap ul li {padding-left:12px; position:relative; line-height:1.3em;}
+.std_info .dt_wrap ul li::after {display: block; content: ''; width:3px; height:3px; border-radius: 50%; position:absolute; left:0; top:8px; background-color: #2f2f2f;}
+.std_info .dt_wrap .std_fac_li {padding:20px; display:flex; gap:20px; flex-wrap:wrap}
+.std_info .dt_wrap .std_fac_li .item {box-sizing:border-box; width:120px; height:84px; border: 1px solid #a0a2a2; border-radius: 8px; display:flex; flex-direction: column; align-items:center; justify-content:center; box-shadow: 1px 2px 4px rgba(0, 0, 0, .15);}
+.std_info .dt_wrap .std_fac_li .item.none {opacity:0.3;}
+.std_info .dt_wrap .std_fac_li .item img {width:36px; height:36px; border-radius: 50%;}
+.std_info .dt_wrap .std_fac_li .item span {margin-top:8px; color:#00A580; margin-top:8px;}
+.std_info .dt_wrap .proce {padding:0 20px; display:flex; gap:20px; flex-wrap:wrap}
+.std_info .dt_wrap .proce .item {box-sizing:border-box; width:120px; height:84px; border-radius: 8px; display:flex; flex-direction: column; align-items:center; justify-content:center;  background-color:#F5F5F5;}
+.std_info .dt_wrap .proce .item strong {font-weight:700; font-size:18px; color:#00A580;}
+.std_info .dt_wrap .proce .item span {font-size:14px; margin-top:5px;}
+.std_info .dt_wrap .noti {padding:10px 20px;}
+.std_info .dt_wrap .noti ~ .noti {margin-top:16px;}
+.std_info .dt_wrap .noti h5 {font-weight:500; margin-bottom:6px;}
+
+/* -------------- 결제신청 ---------------  */
+.payment {padding:0 20px; margin-top:40px;}
+.payment .pay_txt {display:flex; align-items:center; margin-bottom:10px;}
+.payment .pay_txt .txt {font-weight:700;}
+.payment .pay_box {background-color: #F5F5F5; border-radius: 8px; padding:20px;}
+.payment .pay_box .date {font-weight:700;}
+.payment .pay_box .name {margin-top:5px; color:#00A580; font-size:26px; font-weight:700;}
+.payment .pay_box .cond_li {margin-top:15px;}
+.payment .pay_info {margin-top:20px; padding-top:20px; border-top:1px solid #a0a2a2}
+.payment .pay_info dl {display:flex;}
+.payment .pay_info dl ~ dl {margin-top:15px;}
+.payment .pay_info dl dt {width:72px; font-weight:700;}
+.payment .pay_info dl dd {font-size:20px; font-weight:700; color:#00A580;}
+.payment .pay_info dl dd.charge {color:#2f2f2f;}
+.payment .pay_check {display:flex; align-items:center; justify-content:center; flex-direction: column; margin-top:20px; padding-top:20px; border-top:1px solid #a0a2a2}
+.payment .pay_check .chk_wrap {margin-bottom:10px;}
+.payment .pay_check .chk_wrap.all_chk {margin-bottom:20px;}
+.payment > .btn_wrap {margin-top:40px; justify-content:center;}
+.chr_tb {max-width: 340px; width:100%; margin:0 auto;}
+.chr_tb tr th {background-color:#00A580; color:#fff; font-weight:500; height:42px; border-bottom: 1px solid #fff;}
+.chr_tb tr td {border:1px solid #A0A2A2; padding:0 20px;}
+
+/* -------------- 신청 정보 ---------------  */
+.pay_info_apply {padding:0 20px;}
+.pay_info_apply .tit {font-weight:700; margin-bottom:16px;}
+.pay_info_apply .box {border:1px solid #00A580; border-radius: 8px; padding:20px;}
+.pay_info_apply .box ~ .box {margin-top:16px;}
+.pay_info_apply .box .state {font-weight:700; font-size:14px; color:#57EE9B;}
+.pay_info_apply .box .date {margin-top:32px; color:#6e6e6e;}
+.pay_info_apply .box .name {margin-top:12px; font-weight:700; font-size:26px;}
+.pay_info_apply .box .cond_li {margin-top:12px;}
+.pay_info_apply .box .payment_info {margin-top:20px; padding-top:20px; border-top:1px solid #a0a2a2}
+.pay_info_apply .box .payment_info .count {font-weight:700; font-size:14px; margin-bottom:4px;}
+.pay_info_apply .box .payment_info .charge {color:#6e6e6e; font-size:14px;}
+.pay_info_apply > .btn_wrap {justify-content:center; margin-top:40px;}
+
+/* -------------- 소셜매치 예약내역 ---------------  */
+.tit_line_tab.social_ref_tit .tit_r {display: flex; align-items: center; flex:1; justify-content: flex-end;}
+.tit_line_tab.social_ref_tit .tit_r .sort_select {margin-left: 16px;}
+.cancel_inquiry {margin-top: 16px; padding-top: 16px; border-top:1px solid #a0a2a2; display: flex; align-items: center;}
+.cancel_inquiry .payment_info .count {font-size: 14px; font-weight: 700;}
+.cancel_inquiry .payment_info .charge {margin-top: 5px; font-size: 14px; color: #6e6e6e;}
+.cancel_inquiry .payment_info .tot_wrap {display: flex; margin-top: 5px;}
+.cancel_inquiry .payment_info .tot_wrap .fee {color: #6E6E6E; font-size: 14px;}
+.cancel_inquiry .payment_info .tot_wrap .tot_txt {margin-left: 10px; font-weight: 700; font-size: 14px;}
+.cancel_inquiry .payment_info .pay_number {font-size: 14px; font-weight: 700;}
+.cancel_inquiry .cancel_txt  {color: #FF5045; margin-left: auto;}
+.cancel_inquiry .btn_wrap {margin-left: auto;}
+
+/* 신청취소 */
+.cancel_inquiry.cancel_txt_wrap .payment_info .charge {color: #2F2F2F;}
+
+/* -------------- 신청 정보 ---------------  */
+.pay_cancel {max-width: 380px; width: 100%; margin: 0 auto; text-align: center;}
+.pay_cancel .tit {color: #00A580; font-size: 30px; font-weight: 700;}
+.pay_cancel .cancel_form {margin-top: 40px;}
+.pay_cancel .cancel_form .date {font-size: 14px; font-weight: 700; color: #6E6E6E;}
+.pay_cancel .cancel_form .name {font-size: 26px; font-weight: 700; margin-top: 10px;}
+.pay_cancel .cancel_form .cond_li {margin-top: 10px; justify-content: center;}
+.pay_cancel .cancel_form .cond_li li {font-weight: 700;}
+.pay_cancel .cancel_box {padding: 40px 32px; margin-top: 32px; border-radius: 10px; border:1px solid #00A580;}
+.pay_cancel .cancel_box dl {display: flex;}
+.pay_cancel .cancel_box dl ~ dl {margin-top: 42px;}
+.pay_cancel .cancel_box dl.tot {margin-top: 25px; padding-top: 25px; border-top:1px solid #A0A2A2;}
+.pay_cancel .cancel_box dl dt {width: 60%;}
+.pay_cancel .cancel_box dl dd {width: 40%; font-weight: 700; color: #a0a2a2;}
+.pay_cancel .cancel_box dl.tot dt {font-size: 18px;}
+.pay_cancel .cancel_box dl.tot dd {font-size: 18px; font-weight: 700; color: #2f2f2f;}
+.pay_cancel .refund_area {margin-top: 40px;}
+.pay_cancel .refund_area .re_tit {color: #6e6e6e;}
+.pay_cancel .refund_area .chk_wrap {margin-top: 16px;}
+.pay_cancel .refund_area .chk_wrap .form_chk {justify-content: center;}
+.pay_cancel > .btn_wrap {margin-top: 40px; justify-content: center;}
+.refund_pop.alert_pop {max-width: 530px;}
+.refund_pop .refund_policy {margin-top: 24px;}
+.refund_pop .refund_policy .po_tit {font-weight: 700;}
+.refund_pop .refund_policy .group ~ .group {margin-top: 24px;}
+.refund_pop .refund_policy ul {padding-left: 20px; margin-top: 8px;}
+.refund_pop .refund_policy ul li {padding-left: 12px; position: relative; line-height: 1.3em;}
+.refund_pop .refund_policy ul li::after {display: block; content: '-'; position: absolute; left: 0; top: 0; line-height: 1em;}
+
+/* -------------- 내 경기 스케줄 ---------------  */
+.content_tit_area.my_tit_wrap .tit_l {display: flex; align-items: center;}
+.content_tit_area.my_tit_wrap .tit_l .noti_txt {margin-left: 16px;}
+
+/* 데이터없음 */
+.social_none .data_none {padding-top: 40px;}
+.social_none .data_none .img {width: 240px; height: 240px; margin: 0 auto;}
+.social_none .data_none .txt {margin: 40px auto; text-align: center; font-size: 18px; font-weight: 700;}
+.social_none .data_none .btn_wrap {justify-content: center;}
+
+@media only screen and (max-width:1024px) {
+	.cancel_inquiry.cancel_txt_wrap {padding-top: 50px; position: relative;}
+	.cancel_inquiry .cancel_txt {margin-left: 0; position: absolute; left: 0; top: 20px;}
+}
+
+@media only screen and (max-width:768px) {
+	/* -------------- 매치목록 ---------------  */
+	.social_li {padding:0;}
+	.social_tit p {font-size:16px;}
+	.social_tit .count {font-size:14px;}
+	.social_date .date_swiper {padding:0 15px;}
+	.select_list {gap:10px;}
+	.select_list .select_box {width:calc(33.33% - 10px); height:32px;}
+	.social_match ul li {padding:20px 24px; flex-direction: column;align-items: flex-start;}
+	.social_match ul li .info_wrap .txt_wrap {margin-left:0;}
+	.social_match ul li .info_wrap .time {width:85px; font-size:14px; text-align:center;}
+	.social_match ul li .info_wrap .txt_wrap .title {font-size:16px;}
+	.social_match ul li .info_wrap .txt_wrap .condition {font-size:12px;}
+	.social_match ul li > .btn_wrap {margin-left:0; margin-top:16px; width:100%;}
+	.social_match ul li > .btn_wrap .btn {width:100%;}
+	.apply_acc .pop_tit {padding-top:20px;}
+
+	/* -------------- 구장정보 ---------------  */
+	.std_thumb {margin-top:0;}
+	.std_thumb .img {height:180px;}
+	.std_info {padding:0;}
+	.std_info .tit_area .date {font-size:14px;}
+	.std_info .tit_area .title {font-size:20px;}
+	.std_info .cond_wrap {display:block; margin-top:24px;}
+	.std_info .cond_wrap .addr {display:block;}
+	.std_info .cond_wrap .addr li ~ li {margin-left:0; padding-left:0;}
+	.std_info .cond_wrap .addr li ~ li::after {display:none;}
+	.std_info .cond_wrap .cond_li {margin-left:0; margin-top:16px; justify-content: flex-start;}
+	.std_info .cond_wrap .cond_li li {font-size:14px;}
+	.std_info .cond_wrap .cond_li li:not(:last-child) {padding-right:22px;}
+	.std_info .exp_wrap {display:block;}
+	.std_info .exp_wrap .fee .charge strong {font-size:18px;}
+	.std_info .exp_wrap .go_apply {margin-top:20px; justify-content:center;}
+	.std_info .exp_wrap .go_apply .txt {width:150px; text-align:center;}
+	.std_info .exp_wrap .go_apply .btn_wrap {margin-left:0;}
+	.std_info .dt_wrap .gy_box {padding:15px;}
+	.std_info .dt_wrap ul li {padding-left:8px; font-size:14px;}
+	.std_info .dt_wrap ul li::after {top:7px;}
+	.std_info .dt_wrap .std_fac_li {padding:14px; justify-content:center;}
+	.std_info .dt_wrap .proce {gap:10px; padding:0;}
+	.std_info .dt_wrap .proce .item {width:calc(33.33% - 10px); height:70px;}
+	.std_info .dt_wrap .proce .item strong {font-size:16px;}
+	.std_info .dt_wrap .noti {padding:10px;}
+
+	/* -------------- 결제신청 ---------------  */
+	.payment {padding:0;}
+	.payment .pay_txt {display:block;}
+	.payment .pay_txt .txt {margin-bottom:4px;}
+	.payment .pay_box {padding:15px;}
+	.payment .pay_box .date {font-size:14px;}
+	.payment .pay_box .name {font-size:20px;}
+	.payment .pay_box .cond_li {margin-top:10px;}
+	.payment .pay_info dl ~ dl {margin-top:10px;}
+	.payment .pay_info dl dt {font-size:16px;}
+	.payment .pay_info dl dd {font-size:18px;}
+	.chr_tb tr td {padding:0; text-align:center;}
+
+	/* -------------- 신청 정보 ---------------  */
+	.pay_info_apply {padding:0;}
+	.pay_info_apply .tit {margin-bottom:10px;}
+	.pay_info_apply .box .date {margin-top:15px; font-size:14px;}
+	.pay_info_apply .box .name {margin-top:10px; font-size:20px;}
+	.pay_info_apply .box .cond_li {margin-top:10px;}
+	.pay_info_apply .box .payment_info .count {font-weight:700; font-size:14px; margin-bottom:4px;}
+	.pay_info_apply .box .payment_info .charge {color:#6e6e6e; font-size:14px;}
+	.pay_info_apply > .btn_wrap {justify-content:center; margin-top:40px;}
+
+	/* -------------- 소셜매치 예약내역 ---------------  */
+	.tit_line_tab.social_ref_tit {margin-bottom:138px !important; position:relative;}
+	.tit_line_tab.social_ref_tit .tit_r {display: block;}
+	.tit_line_tab.social_ref_tit .nice-select.sort_select {position:absolute; right:0; bottom:-72px; margin-left: 0;}
+	.tit_line_tab.social_ref_tit .tit_r .noti_txt {position: absolute; right: 0; bottom: -98px;}
+	.cancel_inquiry {display: block;}
+	.cancel_inquiry .btn_wrap {margin-left: 0; margin-top: 24px; justify-content: center;}
+
+
+	/* -------------- 신청 정보 ---------------  */
+	.pay_cancel .tit {font-size: 20px;}
+	.pay_cancel .cancel_form {margin-top: 30px;}
+	.pay_cancel .cancel_form .name {font-size: 20px; margin-top: 5px;}
+	.pay_cancel .cancel_form .cond_li {margin-top: 5px;}
+	.pay_cancel .cancel_form .cond_li li {font-size: 14px;}
+	.pay_cancel .cancel_box {padding: 40px 32px; margin-top: 32px;}
+	.pay_cancel .cancel_box dl {display: flex;}
+	.pay_cancel .cancel_box dl ~ dl {margin-top: 40px;}
+	.pay_cancel .cancel_box dl.tot {margin-top: 15px; padding-top: 15px; border-top:2px solid #A0A2A2;}
+	.pay_cancel .cancel_box dl dt {font-size: 14px;}
+	.pay_cancel .cancel_box dl dd {font-size: 14px;}
+	.pay_cancel .cancel_box dl.tot dt {font-size: 16px;}
+	.pay_cancel .cancel_box dl.tot dd {font-size: 16px;}
+	.pay_cancel .refund_area .re_tit {font-size: 14px;}
+
+	/* -------------- 내 경기 스케줄 ---------------  */
+	.content_tit_area.my_tit_wrap {margin-bottom: 66px; position: relative;}
+	.content_tit_area.my_tit_wrap .tit_l {display: block;}
+	.content_tit_area.my_tit_wrap .tit_l .noti_txt {margin-left: 0; position: absolute; left: 0; bottom: -30px;}
+	.social_none .data_none .txt {font-size: 16px;}
+}
+
+
+
+
+
+
+
+
+
+
+
