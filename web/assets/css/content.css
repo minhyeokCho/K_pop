@@ -647,8 +647,8 @@
 .schedule_box li .btn_wrap .btn {width:128px;}
 
 /* 토너먼트 */
-.schedule_box.t_box {padding:40px 60px ; overflow-x:auto;}
-.tournament {width:1020px; touch-action: pinch-zoom pan-x pan-y;}
+.schedule_box.t_box {padding:40px 60px ; overflow-x:auto; touch-action: pinch-zoom pan-x pan-y;}
+.tournament {width:1020px;}
 .tournament .round {gap:0 20px; display:flex; padding-bottom:20px; position:relative;}
 .tournament .round.pb10 {padding-bottom:10px;}
 .tournament .round:last-child {padding-bottom:0;}
