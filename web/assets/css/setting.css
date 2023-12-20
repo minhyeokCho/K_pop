@@ -173,18 +173,24 @@ textarea::-ms-placeholder {
 input {
 	caret-color: #00A580;
 }
+.msg_wrap::-webkit-scrollbar,
+.my_scroll::-webkit-scrollbar,
 .schedule_box.t_box::-webkit-scrollbar,
 .pop_scroll::-webkit-scrollbar {
 	width: 6px;  /* 스크롤바의 너비 */
 	height:6px;
 }
+.msg_wrap::-webkit-scrollbar-thumb,
+.my_scroll::-webkit-scrollbar-thumb,
 .schedule_box.t_box::-webkit-scrollbar-thumb,
 .pop_scroll::-webkit-scrollbar-thumb {
 	background: #A0A2A2; /* 스크롤바의 색상 */
 	border:1px solid transparent;
 	border-radius: 10px;
 }
-.schedule_box.t_box::-webkit-scrollbar-trac,
+.msg_wrap::-webkit-scrollbar-track,
+.my_scroll::-webkit-scrollbar-track,
+.schedule_box.t_box::-webkit-scrollbar-track,
 .pop_scroll::-webkit-scrollbar-track {
 	background: #F5F5F5;  /*스크롤바 뒷 배경 색상*/
 	border-radius: 10px;

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="stylesheet" href="../../assets/css/style.css">
+	<script type="text/javascript" src="../../assets/js/lib/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/jquery.nice-select.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+	<title>로그인 | 아이디 찾기</title>
+<body>
+<div id="accessibility">
+	<ul>
+		<li><a href="#header" title="주메뉴 바로가기">주메뉴 바로가기</a></li>
+		<li><a href="#contents" title="본문 바로가기">본문 바로가기</a></li>
+		<li><a href="#footer" title="푸터 바로가기">푸터 바로가기</a></li>
+	</ul>
+</div>
+<!-- #WRAP -->
+<div id="wrap">
+	<!-- #header -->
+	<header id="header">
+		<div class="head_wrap">
+			<!-- 메인로고 -->
+			<h1>
+				<a href="../main/main.html" title="pop">
+					<img src="../../assets/images/content/logo.png" alt="pop">
+				</a>
+			</h1>
+			<!--// 메인로고 -->
+
+			<!-- GNB -->
+			<nav>
+				<ul>
+					<li class="dept_01">
+						<a href="../reserv/facility.html" title="예약">예약</a>
+						<ul class="sub_dept">
+							<li><a href="../reserv/facility.html" title="시설">시설</a></li>
+							<li><a href="../reserv/res.html" title="예약">예약</a></li>
+							<li><a href="../reserv/inquiry_02.html" title="예약내역">예약내역</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../compt/league.html" title="대회">대회</a>
+						<ul class="sub_dept">
+							<li><a href="../compt/league.html" title="리그">리그</a></li>
+							<li><a href="../compt/cup.html" title="컵">컵</a></li>
+							<li><a href="../compt/my_compt.html" title="나의 대회">나의 대회</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../player/player.html" title="선수">선수</a>
+					</li>
+					<li class="dept_01">
+						<a href="../team/team.html" title="팀">팀</a>
+						<ul class="sub_dept">
+							<li><a href="../team/team.html" title="팀리스트">팀리스트</a></li>
+							<li><a href="../team/my_team.html" title="나의 팀">나의 팀</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../match/match.html" title="매치용병">매치용병</a>
+						<ul class="sub_dept">
+							<li><a href="../match/match.html" title="매치">매치</a></li>
+							<li><a href="../match/merc.html" title="용병">용병</a></li>
+						</ul>
+					</li>
+					<li class="dept_01">
+						<a href="../social/match_list.html" title="소셜매치">소셜매치</a>
+						<ul class="sub_dept">
+							<li><a href="../social/match_list.html" title="매치 리스트">매치 리스트</a></li>
+							<li><a href="../social/social_my.html" title="매치 스케줄">매치 스케줄</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!--// GNB -->
+
+			<!-- 유틸메뉴 -->
+			<div class="util_menu">
+				<div class="login_util">
+					<ul>
+						<li><a href="../login/login.html" title="로그인">로그인</a></li>
+						<li class="my_m"><a href="../mypage/info.html" title="MY PAGE">MY PAGE</a></li>
+						<li class="lang"><a href="#" title="KOR">KOR</a></li>
+
+						<!-- <li><a href="#" title="ENG" class="lang">ENG</a></li> -->
+					</ul>
+				</div>
+				<div class="lang_util">
+					<button type="button" class="current">
+						<figure class="img">
+							<img src="../../assets/images/content/flag_kor.svg" alt="KOR">
+						</figure>
+
+						<!-- <figure class="img">
+							<img src="../../assets/images/content/flag_usa.svg" alt="USA">
+						</figure> -->
+					</button>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="../../assets/images/content/flag_kor.svg" alt="KOR">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="../../assets/images/content/flag_usa.svg" alt="USA">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 전체메뉴 버튼 -->
+				<div class="btn_menu">
+					<button type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<ul>
+						<li>
+							<a href="../login/login.html" title="로그인">로그인</a>
+							<a href="../mypage/info.html" title="마이페이지"><img src="../../assets/images/content/ico_my.svg" alt="마이페이지"></a>
+						</li>
+						<li>
+							<a href="../customer/qna.html" title="고객센터">고객센터</a>
+						</li>
+						<li>
+							<a href="../customer/notice.html" title="공지사항">공지사항</a>
+						</li>
+						<li>
+							<a href="../customer/event.html" title="이벤트">이벤트</a>
+						</li>
+					</ul>
+				</div>
+				<!--// 전체메뉴 버튼 -->
+			</div>
+			<!--// 유틸메뉴 -->
+
+		</div>
+		<div class="nav_bg"></div>
+	</header>
+	<!-- // #header -->
+
+	<!-- 전체메뉴 -->
+	<div class="site_menu">
+		<div class="menu_top">
+			<figure class="img">
+				<img src="../../assets/images/content/logo_s.png" alt="pop">
+			</figure>
+			<button class="close_menu"><span class="blind">닫기</span></button>
+		</div>
+		<div class="cs_menu">
+			<ul>
+				<li><a href="../customer/qna.html" title="1:1문의">1:1문의</a></li>
+				<li><a href="../customer/faq.html" title="FAQ">FAQ</a></li>
+				<li><a href="../customer/notice.html" title="공지사항">공지사항</a></li>
+				<li><a href="../customer/event.html" title="이벤트">이벤트</a></li>
+			</ul>
+		</div>
+		<div class="m_menu">
+			<ul>
+				<!-- 로그인전 -->
+				<li class="login_m">
+					<a href="../login/login.html">로그인을 해주세요</a>
+				</li>
+				<!--// 로그인전 -->
+
+				<!-- 로그인 후 -->
+				<li class="my_m">
+					<a href="../mypage/info.html">MY PAGE</a>
+				</li>
+				<!--// 로그인 후 -->
+
+				<li class="lang_m">
+					<p>언어</p>
+					<a href="#">KOR</a>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">예약</a>
+					<ul>
+						<li class="sub_m"><a href="../reserv/facility.html">시설</a></li>
+						<li class="sub_m"><a href="../reserv/res.html">예약</a></li>
+						<li class="sub_m"><a href="../reserv/inquiry_02.html">예약내역</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">대회</a>
+					<ul>
+						<li class="sub_m"><a href="../compt/league.html">리그</a></li>
+						<li class="sub_m"><a href="../compt/cup.html">컵</a></li>
+						<li class="sub_m"><a href="../compt/my_compt.html">나의 대회</a></li>
+					</ul>
+				</li>
+				<li class="acc acc_none">
+					<a href="#" class="acc_ctrl">선수</a>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">팀</a>
+					<ul>
+						<li class="sub_m"><a href="../team/team.html">팀리스트</a></li>
+						<li class="sub_m"><a href="../team/my_team.html">나의 팀</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">매치용병</a>
+					<ul>
+						<li class="sub_m"><a href="../match/match.html">매치</a></li>
+						<li class="sub_m"><a href="../match/merc.html">용병</a></li>
+					</ul>
+				</li>
+				<li class="acc">
+					<a href="#" class="acc_ctrl">소셜매치</a>
+					<ul>
+						<li class="sub_m"><a href="../social/match_list.html">매치 리스트</a></li>
+						<li class="sub_m"><a href="../social/social_my.html">매치 스케줄</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--// 전체메뉴 -->
+
+	<!-- #CONTENTS -->
+	<div id="contents" class="login_wrap">
+		<div class="login_content">
+			<div class="login_form">
+				<div class="form_tit">
+					<h2 class="login_tit">아이디 찾기</h2>
+					<p class="txt">등록된 휴대폰 번호로 아이디 찾기</p>
+					<p class="desc">가입 당시 입력한 휴대전화 번호를 통해 아이디를 찾으세요</p>
+				</div>
+				<div class="form_cotn form_wrap">
+					<div class="login_inpt">
+						<p class="tit">이름</p>
+						<div class="inpt_wrap with_btn">
+							<input type="text" placeholder="이름 입력" class="inpt_txt">
+						</div>
+					</div>
+					<div class="login_inpt">
+						<p class="tit">휴대폰 번호</p>
+						<div class="inpt_wrap with_btn">
+							<input type="text" placeholder="'-' 구분없이 입력" class="inpt_txt">
+							<div class="btn_wrap">
+								<a href="#" class="btn gray_btn"><span>인증번호 발송</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="login_inpt">
+						<p class="tit">인증번호</p>
+						<div class="inpt_wrap with_btn">
+							<div class="inpt_txt">
+								<input type="text" placeholder="인증번호 입력">
+								<span class="time">2:38</span>
+							</div>
+							<div class="btn_wrap">
+								<a href="#" class="btn main_btn"><span>인증확인</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_wrap login_btn">
+					<a href="#" class="btn sub_btn btn_alert" open-alert="find_id_pop"><span>다음</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // #CONTENTS -->
+
+	<!-- #Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="f_logo">
+				<img src="../../assets/images/content/f_logo.png" alt="pop">
+			</div>
+			<div class="f_info">
+				<p>HNS(본사)</p>
+				<p>e-mail: info@hnscorp.kr</p>
+				<p>TEL: 02-332-7807</p>
+				<p>서울특별시 성동구 왕십리로 58, 서울숲포휴 709호</p>
+			</div>
+			<div class="f_select">
+				<div class="family"><a href="#">Family site</a></div>
+				<ul>
+					<li><a href="#">THE PITCH ONE</a></li>
+					<li><a href="#">에이치엔에스</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!--// #Footer -->
+</div>
+<!-- // WRAP -->
+
+<!-- 예약취소 -->
+<section class="alert_pop find_id_pop">
+	<div class="pop_inner">
+		<div class="pop_scroll">
+			<div class="find_id_wrap">
+				<p>
+					가입하신 아이디는<br><span>test1234</span>입니다.
+				</p>
+			</div>
+			<div class="btn_wrap">
+				<a href="login.html" class="btn main_btn"><span>로그인</span></a>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!--// 예약취소 -->
+</body>
+</html>

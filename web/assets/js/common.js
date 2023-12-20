@@ -12,7 +12,9 @@ $(document).ready(function(){
 	$('.stage_slide').length && stageSlide(); //조별예선 슬라이드
 	$('.btn_copy').length && clip(); //복사 버튼
 	$('.rank_table').length && rankTable(); //순위 테이블 정렬
-	$('.tournament').length && tournaTable(); //토너먼트 테이블
+	$('.policy_btn').length && policy(); //약관 동의 체크 박스
+	$('.rechg_tb').length && rechgTab(); //충전금 탭
+	$('.mypage_pop').length && myPop(); //마이페이지 팝업
 	$('.sort_select').niceSelect(); //정렬 셀렉트박스 커스텀
 
 	$('#datepicker').length && $(function() {//달력
@@ -321,4 +323,82 @@ function rankTable(){ //순위 테이블 정렬
 			$(this).removeClass('up').addClass('down')
 		}
 	})
+}
+
+function policy(){ //약관 동의 체크 박스
+	$('.policy_btn').on('click', function(e){
+		if(!$("#policy_01").is(":checked")){
+			if($("#policy_02").is(":checked")){
+				alert('이용약관에 동의하셔야 회원가입하실 수 있습니다.')
+			}else {
+				alert('약관에 동의하셔야 회원가입하실 수 있습니다.')
+			}
+		}else if(!$("#policy_02").is(":checked")){
+			alert('개인정보 수집 및 이용에 동의하셔야 회원가입하실 수 있습니다.')
+		}else{
+			var target = $(this).attr('open-alert') || e;
+			$('.alert_pop' + '.' + target).fadeIn(200);
+			dimShow();
+		}
+	});
+
+	$("#cbx_chkAll").click(function() {
+		if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
+		else $("input[name=chk]").prop("checked", false);
+	});
+
+	$("input[name=chk]").click(function() {
+		var total = $("input[name=chk]").length;
+		var checked = $("input[name=chk]:checked").length;
+
+		if(total != checked) $("#cbx_chkAll").prop("checked", false);
+		else $("#cbx_chkAll").prop("checked", true);
+	});
+}
+
+function rechgTab(){ //마이페이지 충전금 탭
+	$('.tb_top ul a').on('click', function(e){
+		e.preventDefault()
+		if(!$(this).parent().hasClass('on')){
+			$('.tb_top ul li').removeClass('on')
+			$(this).parent().addClass('on')
+		}
+	})
+}
+
+function myPop(){ //마이페이지 팝업
+	$('.po_btn .btn').on('click', function(e){ /* 팝업열기 */
+		e.preventDefault();
+		$('.recharge_pop').fadeIn(200);
+	});
+
+	$('.rech_close').on('click', function(e){ /* 팝업닫기 */
+		e.preventDefault();
+		$('.recharge_pop').fadeOut(200);
+	});
+
+
+
+	$('.my_m a').on('click', function(e){ /* 팝업열기 */
+		e.preventDefault();
+		$('.site_menu').removeClass('active')
+		$('body').css('overflow', '')
+		$('.mypage_pop').fadeIn(200);
+		dimShow();
+	});
+
+	$('.closed').on('click', function(e){ /* 팝업닫기 */
+		e.preventDefault();
+		$('.mypage_pop').fadeOut(200);
+		setTimeout(dimHide, 150);
+	});
+
+	$(document).mouseup(function (e){ /* 닫기 */
+		var popArea = $('.mypage_pop');
+		if(popArea.has(e.target).length === 0 && $('body').hasClass('dim') && $('.recharge_pop').has(e.target).length === 0){
+			popArea.fadeOut(200);
+			$('.recharge_pop').fadeOut(200);
+			setTimeout(dimHide, 150);
+		}
+	});
 }
