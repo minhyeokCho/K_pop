@@ -209,12 +209,13 @@ function datePicker() { //달력
 
 function resForm() { //예약 폼
 	$('.tab_group .form_chk').on('click', function(){
-		$('.tab_cotn').stop().slideUp(0)
-		$(this).parent().siblings().stop().slideDown(0)
-	})
-	$('.tab_group .form_chk input').on('click', function(){
-		if(!$(this).is(':checked')){
-			$(this).prop('checked', false)
+		var tabGroup = $(this).parent().parent()
+		if(!(tabGroup.hasClass('on'))){
+			$(this).parent().siblings().stop().slideDown(0)
+			tabGroup.addClass('on')
+		}else{
+			$(this).parent().siblings().stop().slideUp(0)
+			tabGroup.removeClass('on')
 		}
 	})
 }
