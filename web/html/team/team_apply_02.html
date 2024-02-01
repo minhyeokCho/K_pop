@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/jquery.nice-select.js"></script>
 	<script type="text/javascript" src="../../assets/js/common.js"></script>
-	<title>이벤트</title>
+	<title>팀 리스트</title>
 <body>
 <div id="accessibility">
 	<ul>
@@ -85,7 +85,7 @@
 				<div class="login_util">
 					<ul>
 						<li><a href="../login/login.html" title="로그인">로그인</a></li>
-						<li><a href="../mypage/info.html" title="MY PAGE">MY PAGE</a></li>
+						<li class="my_m"><a href="../mypage/info.html" title="MY PAGE">MY PAGE</a></li>
 						<li class="lang"><a href="#" title="KOR">KOR</a></li>
 
 						<!-- <li><a href="#" title="ENG" class="lang">ENG</a></li> -->
@@ -227,107 +227,191 @@
 	<!--// 전체메뉴 -->
 
 	<!-- #CONTENTS -->
-	<div id="contents" class="cs_contents">
+	<div id="contents">
+		<!-- 서브 동영상 -->
+		<div class="sub_video sub_video_02">
+			<video width="100%" height="460" autoplay muted loop>
+				<source src="../../assets/images/video/sub_video_02.mp4">
+			</video>
+		</div>
+		<!--// 서브 동영상 -->
+
+		<!-- 이벤트 슬라이드 -->
+		<div class="evt_slide_wrap">
+			<div class="inner">
+				<div class="evt_slide swiper">
+					<div class="swiper-wrapper">
+						<div class="item swiper-slide">
+							<a href="#" class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</a>
+						</div>
+						<a href="#" class="item swiper-slide">
+							<div class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</div>
+						</a>
+						<div href="#" class="item swiper-slide">
+							<div class="item_inner">
+								<!-- 이미지 영역 -->
+								<figure class="img">
+									<img src="../../assets/images/content/evt_slide_temp.png">
+								</figure>
+								<!--// 이미지 영역 -->
+
+								<!-- 텍스트 영역 -->
+								<div class="txt_wrap">
+									<strong>EVENT</strong>
+									<p class="tit">플레이온더피치 오픈 이벤트</p>
+									<p class="txt">회원가입 후 첫 예약 시 포인트 + 굿즈 증정</p>
+									<p class="date">이벤트기간: 2023년 8월 1일 ~ 2023년 8월 31일</p>
+								</div>
+								<!--// 텍스트 영역 -->
+							</div>
+						</div>
+					</div>
+					<div class="evt_arr">
+						<button type="button" class="arr evt_prev"><span class="blind">이전</span></button>
+						<button type="button" class="arr evt_next"><span class="blind">다음</span></button>
+					</div>
+					<div class="evt_bullet"></div>
+				</div>
+			</div>
+		</div>
+		<!--// 이벤트 슬라이드 -->
 
 		<!-- location -->
 		<div class="location">
 			<div class="inner">
 				<ul>
 					<li>홈</li>
-					<li>이벤트</li>
+					<li>팀</li>
+					<li>팀리스트</li>
 				</ul>
 			</div>
 		</div>
 		<!--// location -->
 
 		<div class="sub_content">
+			<!-- 좌측 배너 -->
+			<div class="bnr_wrap bnr_left">
+				<a href="#">
+					<img src="../../assets/images/temp/bnr_01.png">
+				</a>
+			</div>
+			<!--// 좌측 배너 -->
+
 			<!-- 서브컨텐츠 -->
 			<div class="inner">
-				<!--///// 컨텐츠 시작 -->
-
-				<!-- event view -->
-				<div class="board_content">
-					<div class="board_tit notice_view_tit">
-						<span class="img_wrap">
-							<img src="../../assets/images/content/logo_s.png" alt="">
-						</span>
-						<strong>이벤트</strong>
+				<!-- 컨텐츠 타이틀 -->
+				<div class="content_tit_area tit_btn">
+					<!-- 타이틀 좌측 -->
+					<div class="tit_l">
+						<h3 class="title">팀 리스트</h3>
 					</div>
-					<div class="notice_view_wrap evt_view_wrap">
-						<!-- 게시판 상단 -->
-						<div class="notice_view_top">
-							<div class="view_tit">
-								<span class="state ongoing">진행중</span>
-								<strong>2023년 플레이온더피치 이벤트</strong>
-							</div>
-							<div class="view_info">
-								<dl>
-									<dt>작성일</dt>
-									<dd>2023.08.20</dd>
-								</dl>
-								<dl>
-									<dt>작성자</dt>
-									<dd class="color_key">관리자</dd>
-								</dl>
-								<dl>
-									<dt>조회</dt>
-									<dd>9,999</dd>
-								</dl>
-								<dl>
-									<dt>댓글</dt>
-									<dd>5</dd>
-								</dl>
-							</div>
-						</div>
-						<!-- // 게시판 상단 -->
+					<!--// 타이틀 좌측 -->
 
-						<!-- 게시판 콘텐츠 -->
-						<div class="notice_view_con evt_view_con">
-							<img src="../../assets/images/temp/evt_05.png" alt="">
-							<p style="height: 170px;">플레이온더피치 공식 홈페이지 OPEN!</p>
+					<!-- 타이틀 우측 -->
+					<div class="tit_r">
+						<div class="btn_wrap">
+							<a href="#" class="btn main_btn btn_alert" open-alert="setting_team_pop"><span>팀 등록</span></a>
 						</div>
-						<!-- // 게시판 콘텐츠 -->
-
-						<!-- 댓글 -->
-						<div class="cmt_wrap">
-							<div class="cmt_write">
-								<input type="text" />
-								<div class="btn_wrap">
-									<button type="button" class="btn main_btn btn_cmt">등록</button>
+						<div class="search_wrap">
+							<input type="text" placeholder="SEARCH">
+							<button>검색</button>
+						</div>
+					</div>
+					<!--// 타이틀 우측 -->
+				</div>
+				<!--// 컨텐츠 타이틀 -->
+				<div class="player_group">
+					<div class="pl_head h_all">
+						<p>전체</p>
+					</div>
+					<ul class="team_list">
+						<li>
+							<div class="pl_cotn">
+								<figure class="img">
+									<img src="../../assets/images/temp/team_logo_03.png" alt="">
+								</figure>
+								<div class="info">
+									<p class="team_name">팀이름 출력</p>
 								</div>
 							</div>
-							<div class="cmt_list_wrap">
-								<ul class="cmt_list">
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-								</ul>
+							<a href="my_team_info.html" class="go_view"><span class="blind">정보 바로 가기</span></a>
+						</li>
+						<li>
+							<div class="pl_cotn">
+								<figure class="img">
+									<img src="../../assets/images/temp/team_logo_03.png" alt="">
+								</figure>
+								<div class="info">
+									<p class="team_name">ABCABC팀</p>
+								</div>
 							</div>
-						</div>
-						<!-- // 댓글 -->
-					</div>
-					<div class="btn_wrap">
-						<a href="notice.html" class="btn line_btn">목록</a>
-					</div>
+							<a href="my_team_info.html" class="go_view"><span class="blind">정보 바로 가기</span></a>
+						</li>
+						<li>
+							<div class="pl_cotn">
+								<figure class="img">
+									<img src="../../assets/images/temp/team_logo_03.png" alt="">
+								</figure>
+								<div class="info">
+									<p class="team_name">HM 풋살파크</p>
+								</div>
+							</div>
+							<a href="my_team_info.html" class="go_view"><span class="blind">정보 바로 가기</span></a>
+						</li>
+						<li>
+							<div class="pl_cotn">
+								<figure class="img">
+									<img src="../../assets/images/temp/team_logo_03.png" alt="">
+								</figure>
+								<div class="info">
+									<p class="team_name">HM 풋살파크</p>
+								</div>
+							</div>
+							<a href="my_team_info.html" class="go_view"><span class="blind">정보 바로 가기</span></a>
+						</li>
+					</ul>
 				</div>
-				<!-- // event view -->
+
 			</div>
 			<!--// 서브컨텐츠 -->
+
+			<!-- 우측 배너 -->
+			<div class="bnr_wrap bnr_right">
+				<a href="#">
+					<img src="../../assets/images/temp/bnr_02.png">
+				</a>
+			</div>
+			<!--// 우측 배너 -->
 		</div>
 	</div>
 	<!-- // #CONTENTS -->
@@ -356,5 +440,56 @@
 	<!--// #Footer -->
 </div>
 <!-- // WRAP -->
+
+<!-- 팀 설정 완료 -->
+<section class="alert_pop setting_team_pop">
+	<div class="pop_inner">
+		<div class="pop_scroll">
+			<h3 class="pop_tit">팀 등록</h3>
+			<div class="setting_form">
+				<div class="thumb_edit">
+					<div class="team_logo">
+						<!-- 로고이미지 -->
+						<figure class="img">
+							<!-- <img /> -->
+						</figure>
+						<!--// 로고이미지 -->
+					</div>
+					<div class="btn_wrap">
+						<a href="#" class="btn main_btn"><span>사진등록</span></a>
+					</div>
+				</div>
+				<div class="inpt_wrap">
+					<div class="group inpt_g">
+						<p class="tit">팀 이름</p>
+						<input type="text">
+					</div>
+					<div class="group inpt_g">
+						<p class="tit">팀 소개</p>
+						<textarea></textarea>
+					</div>
+					<div class="group">
+						<p class="tit">팀 공개</p>
+						<div class="btn_switch">
+							<label class="form_chk">
+								<input type="checkbox" checked>
+								<i class="icon"></i>
+								<i class="bg"></i>
+								<span class="switch on">공개</span>
+								<span class="switch off">비공개</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn line_btn closed"><span>취소</span></a>
+				<a href="#" class="btn main_btn"><span>저장</span></a>
+			</div>
+		</div>
+		<a href="#" class="pop_close closed"><span class="blind">팝업 닫기</span></a>
+	</div>
+</section>
+<!--// 팀 설정 완료 -->
 </body>
 </html>

@@ -15,7 +15,17 @@ $(document).ready(function(){
 	$('.policy_btn').length && policy(); //약관 동의 체크 박스
 	$('.rechg_tb').length && rechgTab(); //충전금 탭
 	$('.mypage_pop').length && myPop(); //마이페이지 팝업
+	$('.pay_tab').length && myTab(); //마이페이지 탭
+	$(".toast_pop").length && toastPop(); //토스트팝업
 	$('.sort_select').niceSelect(); //정렬 셀렉트박스 커스텀
+
+
+	$('.acc_copy .copy').click(function() { //계좌번호 복사
+		const acc_text = document.getElementById("acc_text");
+		window.navigator.clipboard.writeText(acc_text.textContent).then(() => {
+			alert(acc_text.textContent + " 복사");
+		});
+	});
 
 	$('#datepicker').length && $(function() {//달력
 		var array = ["2023-12-26", "2023-12-14", "2023-12-15", "2024-1-15"] //disable date
@@ -402,4 +412,26 @@ function myPop(){ //마이페이지 팝업
 			setTimeout(dimHide, 150);
 		}
 	});
+}
+
+function myTab() { //결제방법 탭
+	$('.pay_tab .tab').on('click', function(e){
+		e.preventDefault();
+		var tab_data = $(this).attr('data-tab');
+		$(this).siblings().removeClass('on')
+		$(this).addClass('on');
+		$('.pay_cotn .group').removeClass('on');
+		$('.pay_cotn').find("[data-tab='" + tab_data + "']").addClass('on')
+	})
+}
+
+function toastPop(){ //토스트팝업
+	var $toastBtn = $(".btn_toast"),
+		$toast = $(".toast_pop");
+
+	$(window).on('load', function(){
+		setTimeout(function(){
+			$toast.removeClass("active")
+		}, 800);
+	})
 }

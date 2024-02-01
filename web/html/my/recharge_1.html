@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/jquery.nice-select.js"></script>
 	<script type="text/javascript" src="../../assets/js/common.js"></script>
-	<title>이벤트</title>
+	<title>충전하기 (퀵계좌)</title>
 <body>
 <div id="accessibility">
 	<ul>
@@ -227,14 +227,14 @@
 	<!--// 전체메뉴 -->
 
 	<!-- #CONTENTS -->
-	<div id="contents" class="cs_contents">
+	<div id="contents" class="my_contents">
 
 		<!-- location -->
 		<div class="location">
 			<div class="inner">
 				<ul>
 					<li>홈</li>
-					<li>이벤트</li>
+					<li>MY PAGE</li>
 				</ul>
 			</div>
 		</div>
@@ -243,89 +243,187 @@
 		<div class="sub_content">
 			<!-- 서브컨텐츠 -->
 			<div class="inner">
-				<!--///// 컨텐츠 시작 -->
-
-				<!-- event view -->
-				<div class="board_content">
-					<div class="board_tit notice_view_tit">
-						<span class="img_wrap">
-							<img src="../../assets/images/content/logo_s.png" alt="">
-						</span>
-						<strong>이벤트</strong>
+				<div class="my_wrap">
+					<div class="my_tit">
+						<h2>MY PAGE</h2>
 					</div>
-					<div class="notice_view_wrap evt_view_wrap">
-						<!-- 게시판 상단 -->
-						<div class="notice_view_top">
-							<div class="view_tit">
-								<span class="state ongoing">진행중</span>
-								<strong>2023년 플레이온더피치 이벤트</strong>
-							</div>
-							<div class="view_info">
-								<dl>
-									<dt>작성일</dt>
-									<dd>2023.08.20</dd>
-								</dl>
-								<dl>
-									<dt>작성자</dt>
-									<dd class="color_key">관리자</dd>
-								</dl>
-								<dl>
-									<dt>조회</dt>
-									<dd>9,999</dd>
-								</dl>
-								<dl>
-									<dt>댓글</dt>
-									<dd>5</dd>
-								</dl>
-							</div>
-						</div>
-						<!-- // 게시판 상단 -->
+					<!-- 마이페이지 탭 -->
+					<div class="my_tab">
+						<ul>
+							<li>
+								<a href="info.html"><span>회원정보</span></a>
+							</li>
+							<li class="on">
+								<a href="recharge.html"><span>충전내역</span></a>
+							</li>
+						</ul>
+					</div>
+					<!--// 마이페이지 탭 -->
 
-						<!-- 게시판 콘텐츠 -->
-						<div class="notice_view_con evt_view_con">
-							<img src="../../assets/images/temp/evt_05.png" alt="">
-							<p style="height: 170px;">플레이온더피치 공식 홈페이지 OPEN!</p>
+					<!-- 충전 내역 -->
+					<div class="rec_list">
+						<!-- 충전할금액 목록 -->
+						<div class="rec_my">
+							<p class="rec_tit">충전할 금액</p>
 						</div>
-						<!-- // 게시판 콘텐츠 -->
+						<div class="rec_select">
+							<ul>
+								<li>
+									<label for="rec_01">
+										<input type="radio" name="rec" id="rec_01" checked>
+										<span>2,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_02">
+										<input type="radio" name="rec" id="rec_02">
+										<span>5,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_03">
+										<input type="radio" name="rec" id="rec_03">
+										<span>7,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_04">
+										<input type="radio" name="rec" id="rec_04">
+										<span>8,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_05">
+										<input type="radio" name="rec" id="rec_05">
+										<span>10,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_06">
+										<input type="radio" name="rec" id="rec_06">
+										<span>11,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_07">
+										<input type="radio" name="rec" id="rec_07">
+										<span>12,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_08">
+										<input type="radio" name="rec" id="rec_08">
+										<span>15,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_09">
+										<input type="radio" name="rec" id="rec_09">
+										<span>20,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_10">
+										<input type="radio" name="rec" id="rec_10">
+										<span>25,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_11">
+										<input type="radio" name="rec" id="rec_11">
+										<span>30,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_12">
+										<input type="radio" name="rec" id="rec_12">
+										<span>50,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_13">
+										<input type="radio" name="rec" id="rec_13">
+										<span>60,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_14">
+										<input type="radio" name="rec" id="rec_14">
+										<span>80,000원</span>
+									</label>
+								</li>
+								<li>
+									<label for="rec_15">
+										<input type="radio" name="rec" id="rec_15">
+										<span>100,000원</span>
+									</label>
+								</li>
+							</ul>
+							<p class="txt">
+								보유 충전금
+								<span><em>10,000</em>원</span>
+							</p>
+						</div>
+						<!--// 충전할금액 목록 -->
 
-						<!-- 댓글 -->
-						<div class="cmt_wrap">
-							<div class="cmt_write">
-								<input type="text" />
-								<div class="btn_wrap">
-									<button type="button" class="btn main_btn btn_cmt">등록</button>
+						<!-- 결제방법 -->
+						<div class="rec_my">
+							<p class="rec_tit">결제 방법</p>
+						</div>
+						<div class="pay_m">
+							<div class="pay_tab">
+								<button type="button" class="tab on" data-tab="type_1">퀵계좌이체</button>
+								<button type="button" class="tab" data-tab="type_2">가상계좌</button>
+							</div>
+							<div class="pay_cotn">
+								<div class="group on" data-tab="type_1">
+									<div class="pay_noti">
+										<strong>퀵계좌이체 안내</strong>
+										<p>최초 1회만 등록이 필요해요.</p>
+										<p>이후 비밀번호만 입력하면 10초 이내 빠른 결제가 가능해요.</p>
+									</div>
+									<div class="info_link">
+										<strong>안내</strong>
+										<a href="#">·결제수단 변경 매거진 보러가기</a>
+									</div>
+									<div class="chk_wrap">
+										<label class="form_chk" for="chk_pay_01">
+											<input type="checkbox" id="chk_pay_01">
+											<i></i>
+											<p>[필수] 결제 서비스 이용 약관, 개인정보 처리 동의</p>
+										</label>
+									</div>
+								</div>
+								<div class="group" data-tab="type_2">
+									<p class="pay_caution">주문 후 2시간 안에 입금하지 않으면 주문이 취소됩니다.</p>
+									<div class="pay_noti">
+										<strong>가상계좌 안내</strong>
+										<p>가상계좌를 발급 받아 무통장으로 입금하실 수 있어요.</p>
+									</div>
+									<div class="info_link">
+										<strong>안내</strong>
+										<a href="#">·결제수단 변경 매거진 보러가기</a>
+									</div>
+									<div class="chk_wrap">
+										<label class="form_chk" for="chk_pay_02">
+											<input type="checkbox" id="chk_pay_02">
+											<i></i>
+											<p>[필수] 결제 서비스 이용 약관, 개인정보 처리 동의</p>
+										</label>
+									</div>
 								</div>
 							</div>
-							<div class="cmt_list_wrap">
-								<ul class="cmt_list">
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-								</ul>
-							</div>
+
 						</div>
-						<!-- // 댓글 -->
+						<!--// 결제방법 -->
+
+						<div class="btn_wrap btn_big">
+							<a href="#" class="btn line_btn"><span>취소</span></a>
+							<a href="#" class="btn main_btn"><span>충전신청</span></a>
+						</div>
 					</div>
-					<div class="btn_wrap">
-						<a href="notice.html" class="btn line_btn">목록</a>
-					</div>
+					<!--// 충전 내역 -->
 				</div>
-				<!-- // event view -->
 			</div>
 			<!--// 서브컨텐츠 -->
 		</div>

@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/jquery.nice-select.js"></script>
 	<script type="text/javascript" src="../../assets/js/common.js"></script>
-	<title>이벤트</title>
+	<title>충전하기 (가상계좌) 입금대기</title>
 <body>
 <div id="accessibility">
 	<ul>
@@ -227,14 +227,14 @@
 	<!--// 전체메뉴 -->
 
 	<!-- #CONTENTS -->
-	<div id="contents" class="cs_contents">
+	<div id="contents" class="my_contents">
 
 		<!-- location -->
 		<div class="location">
 			<div class="inner">
 				<ul>
 					<li>홈</li>
-					<li>이벤트</li>
+					<li>MY PAGE</li>
 				</ul>
 			</div>
 		</div>
@@ -243,89 +243,67 @@
 		<div class="sub_content">
 			<!-- 서브컨텐츠 -->
 			<div class="inner">
-				<!--///// 컨텐츠 시작 -->
-
-				<!-- event view -->
-				<div class="board_content">
-					<div class="board_tit notice_view_tit">
-						<span class="img_wrap">
-							<img src="../../assets/images/content/logo_s.png" alt="">
-						</span>
-						<strong>이벤트</strong>
+				<div class="my_wrap">
+					<div class="my_tit">
+						<h2>MY PAGE</h2>
 					</div>
-					<div class="notice_view_wrap evt_view_wrap">
-						<!-- 게시판 상단 -->
-						<div class="notice_view_top">
-							<div class="view_tit">
-								<span class="state ongoing">진행중</span>
-								<strong>2023년 플레이온더피치 이벤트</strong>
-							</div>
-							<div class="view_info">
-								<dl>
-									<dt>작성일</dt>
-									<dd>2023.08.20</dd>
-								</dl>
-								<dl>
-									<dt>작성자</dt>
-									<dd class="color_key">관리자</dd>
-								</dl>
-								<dl>
-									<dt>조회</dt>
-									<dd>9,999</dd>
-								</dl>
-								<dl>
-									<dt>댓글</dt>
-									<dd>5</dd>
-								</dl>
-							</div>
-						</div>
-						<!-- // 게시판 상단 -->
-
-						<!-- 게시판 콘텐츠 -->
-						<div class="notice_view_con evt_view_con">
-							<img src="../../assets/images/temp/evt_05.png" alt="">
-							<p style="height: 170px;">플레이온더피치 공식 홈페이지 OPEN!</p>
-						</div>
-						<!-- // 게시판 콘텐츠 -->
-
-						<!-- 댓글 -->
-						<div class="cmt_wrap">
-							<div class="cmt_write">
-								<input type="text" />
-								<div class="btn_wrap">
-									<button type="button" class="btn main_btn btn_cmt">등록</button>
-								</div>
-							</div>
-							<div class="cmt_list_wrap">
-								<ul class="cmt_list">
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-									<li>
-										<span class="name">리바페</span>
-										<strong class="con">이벤트 기대됩니다!</strong>
-										<span class="date">2023.08.20</span>
-										<div class="time">11:23:15</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- // 댓글 -->
+					<!-- 마이페이지 탭 -->
+					<div class="my_tab">
+						<ul>
+							<li>
+								<a href="info.html"><span>회원정보</span></a>
+							</li>
+							<li class="on">
+								<a href="recharge.html"><span>충전내역</span></a>
+							</li>
+						</ul>
 					</div>
-					<div class="btn_wrap">
-						<a href="notice.html" class="btn line_btn">목록</a>
+					<!--// 마이페이지 탭 -->
+
+					<!-- 충전 내역 -->
+					<div class="rec_list">
+						<div class="rec_my">
+							<p class="rec_tit">나의 충전금</p>
+							<span><em>30,000</em>원</span>
+						</div>
+						<div class="btn_wrap btn_big">
+							<a href="#" class="btn line_btn btn_alert" open-alert="cancel_pop"><span>충전금 환불</span></a>
+							<a href="recharge_1.html" class="btn main_btn"><span>충전하기</span></a>
+						</div>
+						<div class="rec_noti">
+							<ul>
+								<li>충전금은 소셜 매치 이용 시에만 사용 가능합니다.</li>
+								<li>구장 예약은 충전금 사용 불가합니다.</li>
+							</ul>
+							<p class="point">매치 신청은 환불 신청을 취소하거나 환불 받은 후 가능합니다.</p>
+						</div>
+						<div class="rec_state">
+							<ul>
+								<li class="wait">
+									<!--
+										충전 상태별 클래스 추가
+
+										취소 class="cancel"
+										대기 class="wait"
+										충전 class="recharge"
+									-->
+									<div class="info">
+										<div class="label">대기</div>
+										<div class="txt">
+											<p>입금 대기</p>
+											<span>1월 22일 13:50</span>
+										</div>
+									</div>
+									<div class="pay">
+										<em>30,000</em>원
+									</div>
+								</li>
+							</ul>
+						</div>
 					</div>
+					<!--// 충전 내역 -->
+
 				</div>
-				<!-- // event view -->
 			</div>
 			<!--// 서브컨텐츠 -->
 		</div>
@@ -356,5 +334,61 @@
 	<!--// #Footer -->
 </div>
 <!-- // WRAP -->
+
+<!-- 환불신청팝업 -->
+<section class="alert_pop cancel_pop">
+	<button class="pop_close closed"><span class="blind">닫기</span></button>
+	<div class="pop_inner">
+		<div class="tit_area">
+			<p class="cancel_pop_tit">환불신청</p>
+			<p class="cancel_txt">잔여 충전금만 환불됩니다.</p>
+		</div>
+		<div class="m_scroll">
+			<div class="res_wrap">
+				<div class="res_pay">
+					<p>잔여 충전금</p>
+					<span>
+						<em>30,000</em>원
+					</span>
+				</div>
+			</div>
+
+			<div class="refund_prc">
+				<div class="refund_pay">
+					<div class="txt_inner">
+						<p>환불 가능 금액</p>
+						<span>
+							<em>30,000</em>원
+						</span>
+					</div>
+					<p class="refund_caution">환불 가능한 충전금이 존재하지 않습니다.</p>
+				</div>
+				<div class="inpt_wrap">
+					<p class="tit">환불계좌은행</p>
+					<select class="select_box">
+						<option>은행을 선택해주세요</option>
+						<option>신한은행</option>
+						<option>신한은행</option>
+					</select>
+				</div>
+				<div class="inpt_wrap">
+					<p class="tit">환불계좌번호</p>
+					<input type="text" placeholder="환불계좌번호를 입력해주세요">
+					<p class="txt">계좌번호에 띄어쓰기나 - 없이 작성해주세요</p>
+				</div>
+				<div class="inpt_wrap">
+					<p class="tit">환불계좌 예금주</p>
+					<input type="text" placeholder="예금주명을 입력해주세요">
+					<p class="inpt_caution">예금주명을 입력해주세요</p>
+				</div>
+				<p class="prc_noti">충전금 환불은 매주 월요일 15시부터 순차적으로 처리됩니다.</p>
+				<div class="btn_wrap">
+					<a href="#" class="btn main_btn w100"><span>충전금 환불</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--// 환불신청팝업 -->
 </body>
 </html>
